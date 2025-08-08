@@ -1,0 +1,6 @@
+D:\programming\course19\New folder\DVLD\DVLDData\bin\Debug\DVLDData.dll
+D:\programming\course19\New folder\DVLD\DVLDData\bin\Debug\DVLDData.pdb
+D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.csproj.AssemblyReference.cache
+D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.csproj.CoreCompileInputs.cache
+D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.dll
+D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.pdb

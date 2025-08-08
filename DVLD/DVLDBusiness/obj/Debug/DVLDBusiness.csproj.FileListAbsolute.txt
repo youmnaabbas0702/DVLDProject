@@ -1,0 +1,9 @@
+D:\programming\course19\New folder\DVLD\DVLDBusiness\bin\Debug\DVLDBusiness.dll
+D:\programming\course19\New folder\DVLD\DVLDBusiness\bin\Debug\DVLDBusiness.pdb
+D:\programming\course19\New folder\DVLD\DVLDBusiness\bin\Debug\DVLDData.dll
+D:\programming\course19\New folder\DVLD\DVLDBusiness\bin\Debug\DVLDData.pdb
+D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusiness.csproj.AssemblyReference.cache
+D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusiness.csproj.CoreCompileInputs.cache
+D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusi.27287F95.Up2Date
+D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusiness.dll
+D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusiness.pdb
