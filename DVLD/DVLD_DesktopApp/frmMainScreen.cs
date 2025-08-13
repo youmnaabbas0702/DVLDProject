@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.People;
+﻿using DVLD_DesktopApp.ApplicationTypes;
+using DVLD_DesktopApp.People;
 using DVLD_DesktopApp.Users;
 using System;
 using System.Collections.Generic;
@@ -53,6 +54,12 @@ namespace DVLD_DesktopApp
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChangePassword frm = new frmChangePassword(clsGlobalSettings.CurrentUser.UserID);
+            frm.ShowDialog();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListApplicationTypes frm = new frmListApplicationTypes();
             frm.ShowDialog();
         }
     }

@@ -24,3 +24,5 @@ D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopAp
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlUserCard.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Users.frmUserDetails.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Users.frmChangePassword.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.ApplicationTypes.frmListApplicationTypes.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.ApplicationTypes.frmEditApplicationType.resources
