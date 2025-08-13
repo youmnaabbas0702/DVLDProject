@@ -18,6 +18,9 @@ namespace DVLD_DesktopApp.People
     {
         public event Action OperationOccuredEventHandler;
 
+        public delegate void PersonAddedDelegate(int personID);
+        public event PersonAddedDelegate PersonAdded;
+        
         private int _PersonID = -1;
         private clsPerson.enMode _Mode = clsPerson.enMode.AddNew;
         private bool _OperationOccured = false;
@@ -121,6 +124,17 @@ namespace DVLD_DesktopApp.People
             {
                 epEmailValidate.SetError(txtEmail, "");
             }
+
+        }
+
+        private bool _CheckNonEmpty()
+        {
+            return !string.IsNullOrWhiteSpace(txtFName.Text) &&
+       !string.IsNullOrWhiteSpace(txtSName.Text) &&
+       !string.IsNullOrWhiteSpace(txtLName.Text) &&
+       !string.IsNullOrWhiteSpace(txtAddress.Text) &&
+       !string.IsNullOrWhiteSpace(txtNationalNo.Text) &&
+       !string.IsNullOrWhiteSpace(txtPhone.Text);
 
         }
 
@@ -266,6 +280,12 @@ namespace DVLD_DesktopApp.People
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!_CheckNonEmpty())
+            {
+                MessageBox.Show("There are Unfilled fields.", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             switch (_Mode)
             {
                 case clsPerson.enMode.AddNew:
@@ -273,6 +293,7 @@ namespace DVLD_DesktopApp.People
                     {
                         MessageBox.Show($"Person added successfully with ID = {_PersonID}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         _OperationOccured = true;
+                        PersonAdded?.Invoke(_PersonID);
                         _Mode = clsPerson.enMode.Update;
                         _LoadPersonInfo();
                     } 

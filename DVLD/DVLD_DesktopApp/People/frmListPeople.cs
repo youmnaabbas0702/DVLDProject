@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace DVLD_DesktopApp.People
 {
-    public partial class frmManagePeople : Form
+    public partial class frmListPeople : Form
     {
         private BindingSource _PeopleBindingSource = new BindingSource();
-        public frmManagePeople()
+        public frmListPeople()
         {
             InitializeComponent();
             _SetUp();

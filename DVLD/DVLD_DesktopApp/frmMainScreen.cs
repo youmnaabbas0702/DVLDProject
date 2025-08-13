@@ -1,4 +1,5 @@
 ﻿using DVLD_DesktopApp.People;
+using DVLD_DesktopApp.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,30 @@ namespace DVLD_DesktopApp
 
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmManagePeople frm = new frmManagePeople();
+            frmListPeople frm = new frmListPeople();
+            frm.ShowDialog();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListUsers frm = new frmListUsers();
+            frm.ShowDialog();
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserDetails frm = new frmUserDetails(clsGlobalSettings.CurrentUser.UserID);
+            frm.ShowDialog();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frm = new frmChangePassword(clsGlobalSettings.CurrentUser.UserID);
             frm.ShowDialog();
         }
     }

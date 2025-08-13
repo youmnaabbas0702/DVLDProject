@@ -99,7 +99,7 @@ namespace DVLDData
                             ThirdName = (string)reader["ThirdName"];
                         }
                         else
-                            ThirdName = (string)reader["ThirdName"];
+                            ThirdName = "";
 
                         LastName = (string)reader["LastName"];
                         PersonID = (int)reader["PersonID"];
@@ -113,7 +113,7 @@ namespace DVLDData
                             Email = (string)reader["Email"];
                         }
                         else
-                            Email = (string)reader["Email"];
+                            Email = "";
 
                         NationalityCountryID = (int)reader["NationalityCountryID"];
 
@@ -122,7 +122,7 @@ namespace DVLDData
                             ImagePath = (string)reader["ImagePath"];
                         }
                         else
-                            ImagePath = (string)reader["ImagePath"];
+                            ImagePath = "";
                         isFound = true;
                     }
                 }

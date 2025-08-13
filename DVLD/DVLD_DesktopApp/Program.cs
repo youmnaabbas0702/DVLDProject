@@ -16,7 +16,22 @@ namespace DVLD_DesktopApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainScreen());
+
+            while (true)
+            {
+                using (frmLogin login = new frmLogin())
+                {
+                    if (login.ShowDialog() == DialogResult.OK)
+                    {
+                        Application.Run(new frmMainScreen());
+                    }
+                    else
+                    {
+                        break; // user closed login or canceled
+                    }
+                }
+            }
+
         }
     }
 }

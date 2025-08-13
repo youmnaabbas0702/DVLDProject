@@ -1,6 +1,6 @@
 ﻿namespace DVLD_DesktopApp.People
 {
-    partial class frmManagePeople
+    partial class frmListPeople
     {
         /// <summary>
         /// Required designer variable.
@@ -94,28 +94,28 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(249, 265);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(236, 232);
             // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showDetailsToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.ShowPersonDetails;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(224, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(232, 6);
             // 
             // addNewPersonToolStripMenuItem
             // 
             this.addNewPersonToolStripMenuItem.Font = new System.Drawing.Font("Gill Sans MT", 10F);
             this.addNewPersonToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.AddPerson;
             this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.addNewPersonToolStripMenuItem.Text = "Add New Person";
             this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
             // 
@@ -124,7 +124,7 @@
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Gill Sans MT", 10F);
             this.editToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.EditPerson;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -133,21 +133,21 @@
             this.deleteToolStripMenuItem.Font = new System.Drawing.Font("Gill Sans MT", 10F);
             this.deleteToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.DeletePerson;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(224, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(232, 6);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Font = new System.Drawing.Font("Gill Sans MT", 10F);
             this.sendEmailToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.SendEmail;
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
             // 
@@ -156,7 +156,7 @@
             this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Gill Sans MT", 10F);
             this.phoneCallToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.call;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(235, 36);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
             this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallToolStripMenuItem_Click);
             // 
@@ -254,7 +254,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // frmManagePeople
+            // frmListPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,8 +269,8 @@
             this.Controls.Add(this.dgvPeople);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "frmManagePeople";
-            this.Text = "Manage People";
+            this.Name = "frmListPeople";
+            this.Text = "List People";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
