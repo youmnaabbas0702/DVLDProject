@@ -1,5 +1,6 @@
 ﻿using DVLD_DesktopApp.ApplicationTypes;
 using DVLD_DesktopApp.People;
+using DVLD_DesktopApp.TestTypes;
 using DVLD_DesktopApp.Users;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,12 @@ namespace DVLD_DesktopApp
         private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListApplicationTypes frm = new frmListApplicationTypes();
+            frm.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListTestTypes frm = new frmListTestTypes();
             frm.ShowDialog();
         }
     }
