@@ -28,3 +28,5 @@ D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopAp
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.ApplicationTypes.frmEditApplicationType.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.TestTypes.frmListTestTypes.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.TestTypes.frmEditTestType.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Applications.LocalLicenseApplications.frmAddLocalLicenseApplication.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Applications.LocalLicenseApplications.frmListLocalLicenseApplications.resources

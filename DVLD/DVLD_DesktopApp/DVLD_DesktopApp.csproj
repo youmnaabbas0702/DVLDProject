@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\LocalLicenseApplications\frmAddLocalLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LocalLicenseApplications\frmAddLocalLicenseApplication.Designer.cs">
+      <DependentUpon>frmAddLocalLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\LocalLicenseApplications\frmListLocalLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\LocalLicenseApplications\frmListLocalLicenseApplications.Designer.cs">
+      <DependentUpon>frmListLocalLicenseApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationTypes\frmEditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     <Compile Include="Users\frmUserDetails.Designer.cs">
       <DependentUpon>frmUserDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Applications\LocalLicenseApplications\frmAddLocalLicenseApplication.resx">
+      <DependentUpon>frmAddLocalLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\LocalLicenseApplications\frmListLocalLicenseApplications.resx">
+      <DependentUpon>frmListLocalLicenseApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationTypes\frmEditApplicationType.resx">
       <DependentUpon>frmEditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +350,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AppTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewLicense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenewLicense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplaceLicense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReleaseLicense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RetakeTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\international.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddApp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\licenseClass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

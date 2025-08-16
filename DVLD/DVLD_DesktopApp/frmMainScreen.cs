@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.ApplicationTypes;
+﻿using DVLD_DesktopApp.Applications.LocalLicenseApplications;
+using DVLD_DesktopApp.ApplicationTypes;
 using DVLD_DesktopApp.People;
 using DVLD_DesktopApp.TestTypes;
 using DVLD_DesktopApp.Users;
@@ -67,6 +68,18 @@ namespace DVLD_DesktopApp
         private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListTestTypes frm = new frmListTestTypes();
+            frm.ShowDialog();
+        }
+
+        private void localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListLocalLicenseApplications frm = new frmListLocalLicenseApplications();
+            frm.ShowDialog();
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddLocalLicenseApplication frm = new frmAddLocalLicenseApplication();
             frm.ShowDialog();
         }
     }
