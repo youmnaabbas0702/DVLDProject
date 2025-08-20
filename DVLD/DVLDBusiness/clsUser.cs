@@ -12,7 +12,7 @@ namespace DVLDBusiness
     {
         public enum enMode { AddNew, Update }
 
-        public int UserID { get; set; }
+        public int UserID { get; private set; }
         public int PersonID { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }

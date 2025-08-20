@@ -79,7 +79,13 @@ namespace DVLD_DesktopApp
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddLocalLicenseApplication frm = new frmAddLocalLicenseApplication();
+            frmAddEditLocalLicenseApplication frm = new frmAddEditLocalLicenseApplication();
+            frm.ShowDialog();
+        }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListDrivers frm = new frmListDrivers();
             frm.ShowDialog();
         }
     }

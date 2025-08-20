@@ -10,7 +10,7 @@ namespace DVLDBusiness
 {
     public class clsApplication
     {
-        public int ApplicationID { get; set; }
+        public int ApplicationID { get; private set; }
         public int ApplicantPersonID { get; set; }
         public DateTime ApplicationDate { get; set; }
         public int ApplicationTypeID { get; set; }

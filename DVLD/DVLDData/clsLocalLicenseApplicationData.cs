@@ -194,6 +194,70 @@ namespace DVLDData
             return applicationID;
         }
 
+
+        public static DataRow GetLocalLicenseApplicationDetails(int localDLAppID)
+        {
+            DataTable dt = new DataTable();
+
+            string query = @"
+        SELECT  
+            LDLA.LocalDrivingLicenseApplicationID as LDLAppID,
+            LC.ClassName AS LicenseClass,
+            (
+                SELECT COUNT(DISTINCT TA.TestTypeID)
+                FROM TestAppointments TA
+                INNER JOIN Tests T ON TA.TestAppointmentID = T.TestAppointmentID
+                WHERE TA.LocalDrivingLicenseApplicationID = LDLA.LocalDrivingLicenseApplicationID
+                  AND T.TestResult = 1
+            ) AS PassedTests,
+            A.ApplicationID,
+            CASE A.ApplicationStatus
+                WHEN 1 THEN 'New'
+                WHEN 2 THEN 'Cancelled'
+                WHEN 3 THEN 'Completed'
+                ELSE 'Unknown'
+            END AS [Status],
+            APPT.ApplicationFees as Fees,
+            APPT.ApplicationTypeTitle as [Type],
+            (P.FirstName + ' ' + P.SecondName + ' ' + P.LastName) AS Applicant,
+            A.ApplicationDate,
+            A.LastStatusDate,
+            U.UserName as CreatedBy
+        FROM LocalDrivingLicenseApplications LDLA
+        INNER JOIN Applications A 
+            ON LDLA.ApplicationID = A.ApplicationID
+        INNER JOIN ApplicationTypes APPT
+            ON A.ApplicationTypeID = APPT.ApplicationTypeID
+        INNER JOIN Users U
+            ON A.CreatedByUserID = U.UserID
+        INNER JOIN LicenseClasses LC 
+            ON LDLA.LicenseClassID = LC.LicenseClassID
+        INNER JOIN People P 
+            ON A.ApplicantPersonID = P.PersonID
+        WHERE LocalDrivingLicenseApplicationID = @ID";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", localDLAppID);
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        dt.Load(reader);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return dt.Rows.Count > 0 ? dt.Rows[0] : null;
+        }
+
     }
 
 }

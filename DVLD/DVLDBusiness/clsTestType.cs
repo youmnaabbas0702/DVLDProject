@@ -10,7 +10,7 @@ namespace DVLDBusiness
 {
     public class clsTestType
     {
-        public int TestTypeID { get; set; }
+        public int TestTypeID { get; private set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public decimal Fees { get; set; }

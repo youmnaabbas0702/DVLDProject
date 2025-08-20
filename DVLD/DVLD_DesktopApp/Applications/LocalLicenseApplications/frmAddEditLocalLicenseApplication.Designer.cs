@@ -1,6 +1,6 @@
 ﻿namespace DVLD_DesktopApp.Applications.LocalLicenseApplications
 {
-    partial class frmAddLocalLicenseApplication
+    partial class frmAddEditLocalLicenseApplication
     {
         /// <summary>
         /// Required designer variable.

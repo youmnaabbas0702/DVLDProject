@@ -14,7 +14,7 @@ namespace DVLD_DesktopApp
     {
         public enum enMode { AddNew, Update }
 
-        public int PersonID { get; set; }
+        public int PersonID { get; private set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string ThirdName { get; set; }

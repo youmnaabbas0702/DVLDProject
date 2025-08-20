@@ -10,7 +10,7 @@ namespace DVLDBusiness
 {
     public class clsLocalLicenseApplication
     {
-        public int LocalDrivingLicenseApplicationID { get; set; }
+        public int LocalDrivingLicenseApplicationID { get; private set; }
         public int ApplicationID { get; set; }
         public int LicenseClassID { get; set; }
 
@@ -94,6 +94,11 @@ namespace DVLDBusiness
         public static int ExistingApplicationID(int personID, int classID)
         {
             return clsLocalLicenseApplicationData.GetActiveApplicationID(personID, classID);
+        }
+
+        public DataRow GetApplicationDetails()
+        {
+            return clsLocalLicenseApplicationData.GetLocalLicenseApplicationDetails(LocalDrivingLicenseApplicationID);
         }
     }
 

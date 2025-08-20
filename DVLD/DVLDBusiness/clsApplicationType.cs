@@ -11,7 +11,7 @@ namespace DVLDBusiness
     public class clsApplicationType
     {
         
-        public int ApplicationTypeID { get; set; }
+        public int ApplicationTypeID { get; private set; }
         public string Title { get; set; }
         public decimal Fees { get; set; }
 
