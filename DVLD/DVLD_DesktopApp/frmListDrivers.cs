@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.People;
+﻿using DVLD_DesktopApp.Licenses;
+using DVLD_DesktopApp.People;
 using DVLDBusiness;
 using System;
 using System.Collections.Generic;
@@ -93,6 +94,13 @@ namespace DVLD_DesktopApp
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int personID = Convert.ToInt32(dgvDrivers.CurrentRow.Cells["PersonID"].Value);
+            frmLicenseHistory frm = new frmLicenseHistory(personID);
+            frm.ShowDialog();
         }
     }
 }

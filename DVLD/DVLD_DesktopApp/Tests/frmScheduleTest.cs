@@ -1,4 +1,5 @@
-﻿using DVLDBusiness;
+﻿using DVLD_DesktopApp.Controls;
+using DVLDBusiness;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +72,7 @@ namespace DVLD_DesktopApp.TestAppointments.VisionTest
                 clsTestAppointment appointment = clsTestAppointment.Find(_AppointmentID);
                 if (appointment != null)
                 {
+                    dtpAppointmentDate.MinDate = appointment.AppointmentDate;
                     dtpAppointmentDate.Value = appointment.AppointmentDate;
 
                     if (appointment.IsLocked)
@@ -120,6 +122,26 @@ namespace DVLD_DesktopApp.TestAppointments.VisionTest
             if (appointment.Save())
             {
                 _AppointmentID = appointment.TestAppointmentID;
+                if (_IsRetake)
+                { 
+                    //issue application of type {Retake test}
+                    lblRetakeAppID.Text = _AppointmentID.ToString();
+                    clsApplication app = new clsApplication();
+
+                    clsLocalLicenseApplication localApp = clsLocalLicenseApplication.Find(_LocalAppID);
+                    clsApplication application = clsApplication.Find(localApp.ApplicationID);
+
+                    app.ApplicantPersonID = application.ApplicantPersonID;
+                    app.ApplicationDate = DateTime.Now;
+                    app.ApplicationTypeID = 8;
+                    app.ApplicationStatus = 1;
+                    app.LastStatusDate = DateTime.Now;
+                    app.PaidFees = Convert.ToDecimal(lblRetakeAppFees.Text);
+                    app.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+
+                    return app.Save();
+                    
+                }
                 return true;
             }
 
@@ -142,8 +164,7 @@ namespace DVLD_DesktopApp.TestAppointments.VisionTest
                     {
                         MessageBox.Show($"Appointment added successfully with ID = {_AppointmentID}",
                             "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        if (_IsRetake)
-                            lblRetakeAppID.Text = _AppointmentID.ToString();
+                        
 
                         _Mode = clsTestAppointment.enMode.Update;
                     }

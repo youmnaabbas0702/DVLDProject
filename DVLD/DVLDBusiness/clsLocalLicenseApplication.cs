@@ -1,4 +1,5 @@
-﻿using DVLDData;
+﻿using DVLD_DesktopApp;
+using DVLDData;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -51,6 +52,21 @@ namespace DVLDBusiness
 
         private bool _AddNew()
         {
+            clsApplication app = clsApplication.Find(ApplicationID);
+            if (app != null)
+            {
+                clsPerson person = clsPerson.Find(app.ApplicantPersonID);
+                if (person != null)
+                {
+                    int age = DateTime.Now.Year - person.DateOfBirth.Year;
+                    clsLicenseClass licenseClassInfo = clsLicenseClass.Find(LicenseClassID);
+                    if (age < licenseClassInfo.MinimumAllowedAge)
+                    {
+                        return false;
+                    }
+                }
+            }
+
             this.LocalDrivingLicenseApplicationID = clsLocalLicenseApplicationData.AddNewLocalLicenseApplication(
                 ApplicationID, LicenseClassID);
 

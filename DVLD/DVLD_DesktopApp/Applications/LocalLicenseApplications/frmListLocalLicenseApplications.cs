@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.TestAppointments;
+﻿using DVLD_DesktopApp.Licenses;
+using DVLD_DesktopApp.TestAppointments;
 using DVLD_DesktopApp.TestAppointments.VisionTest;
 using DVLDBusiness;
 using System;
@@ -272,11 +273,37 @@ namespace DVLD_DesktopApp.Applications.LocalLicenseApplications
             frm.ShowDialog();
         }
 
-
         //issue license
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localLicenseAppID = Convert.ToInt32(dgvApplications.CurrentRow.Cells["L.D.L.AppID"].Value);
+            frmIssueNewLicense frm = new frmIssueNewLicense(localLicenseAppID);
+            frm.OperationOccuredEventHandler += _RefreshList;
+            frm.ShowDialog();
+        }
 
         //show license
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localLicenseAppID = Convert.ToInt32(dgvApplications.CurrentRow.Cells["L.D.L.AppID"].Value);
+            frmLicenseInfo frm = new frmLicenseInfo(localLicenseAppID);
+            frm.ShowDialog();
+        }
 
         //show licenses history
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int localLicenseAppID = Convert.ToInt32(dgvApplications.CurrentRow.Cells["L.D.L.AppID"].Value);
+            clsLocalLicenseApplication localapp = clsLocalLicenseApplication.Find(localLicenseAppID);
+            if (localapp != null)
+            {
+                clsApplication app = clsApplication.Find(localapp.ApplicationID);
+                if (app != null)
+                {
+                    frmLicenseHistory frm = new frmLicenseHistory(app.ApplicantPersonID);
+                    frm.ShowDialog();
+                }
+            }
+        }
     }
 }

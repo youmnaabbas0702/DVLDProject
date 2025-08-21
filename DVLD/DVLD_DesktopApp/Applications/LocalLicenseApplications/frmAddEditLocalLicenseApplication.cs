@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD_DesktopApp.Applications.LocalLicenseApplications
 {
@@ -143,6 +144,19 @@ namespace DVLD_DesktopApp.Applications.LocalLicenseApplications
                             MessageBox.Show($"Person already have an application of the same license class with ID = {ExistingAppID}.", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
+                        clsPerson person = clsPerson.Find(personID);
+                        if (person != null)
+                        {
+                            int age = DateTime.Now.Year - person.DateOfBirth.Year;
+                            clsLicenseClass licenseClassInfo = clsLicenseClass.Find(classID);
+                            if (age < licenseClassInfo.MinimumAllowedAge)
+                            {
+                                MessageBox.Show($"Applicant must be at least {licenseClassInfo.MinimumAllowedAge} years old.",
+                                "Age Restriction",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                                return;
+                            }
+                        }
+                        
 
                         if (_AddNewApplication())
                             MessageBox.Show("Application issued successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
