@@ -152,6 +152,7 @@
             this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
             this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(312, 32);
             this.editApplicationToolStripMenuItem.Text = "Issue international license";
+            this.editApplicationToolStripMenuItem.Click += new System.EventHandler(this.editApplicationToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
@@ -160,7 +161,7 @@
             // 
             // showPersonLicenseHistoryToolStripMenuItem
             // 
-            this.showPersonLicenseHistoryToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.DrivingLicenseApps;
+            this.showPersonLicenseHistoryToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.licenseHistory;
             this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
             this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(312, 32);
             this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show person license history";

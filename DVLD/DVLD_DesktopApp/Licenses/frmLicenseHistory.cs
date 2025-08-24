@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLDBusiness;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +21,15 @@ namespace DVLD_DesktopApp.Licenses
             ctrlPersonCardWithFilter1.PersonID = PersonID;
             ctrlPersonCardWithFilter1.FillPersonCard();
 
-            ctrlLicenseHistory1.PersonID = PersonID;
-            ctrlLicenseHistory1.LoadLocalLicenses();
+            LoadLicensesHistory(PersonID);
+
+        }
+
+        private void LoadLicensesHistory(int PersonID)
+        {
+            ctrlLicenseHistory1.LoadLocalLicenses(PersonID);
+            int DriverID = clsDriver.GetDriverIDByPersonID(PersonID);
+            ctrlLicenseHistory1.LoadInternationalLicenses(DriverID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

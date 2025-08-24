@@ -24,6 +24,28 @@ namespace DVLDBusiness
             CreatedByUserID = -1;
         }
 
+        private clsDriver(int driverID, int personID, DateTime createdDate, int createdByUserID)
+        {
+            DriverID = driverID;
+            PersonID = personID;
+            CreatedDate = createdDate;
+            CreatedByUserID = createdByUserID;
+        }
+
+        public static clsDriver Find(int driverID)
+        {
+            int personID = -1;
+            DateTime createdDate = DateTime.Now;
+            int createdByUserID = -1;
+
+            if (clsDriverData.Find(driverID, ref personID, ref createdDate, ref createdByUserID))
+            {
+                return new clsDriver(driverID, personID, createdDate, createdByUserID);
+            }
+            else
+                return null;
+        }
+
         private bool _AddNewDriver()
         {
             this.DriverID = clsDriverData.AddNewDriver(PersonID, CreatedDate, CreatedByUserID);

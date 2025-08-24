@@ -10,6 +10,36 @@ namespace DVLDData
 {
     public class clsDriverData
     {
+        public static bool Find(int driverID, ref int personID, ref DateTime createdDate, ref int createdByUserID)
+        {
+            bool isFound = false;
+
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"SELECT PersonID, CreatedDate, CreatedByUserID 
+                         FROM Drivers 
+                         WHERE DriverID = @DriverID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@DriverID", driverID);
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            personID = Convert.ToInt32(reader["PersonID"]);
+                            createdDate = Convert.ToDateTime(reader["CreatedDate"]);
+                            createdByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+                        }
+                    }
+                }
+            }
+            return isFound;
+        }
+
         public static int AddNewDriver(int personID, DateTime createdDate, int createdByUserID)
         {
             int newDriverID = -1;

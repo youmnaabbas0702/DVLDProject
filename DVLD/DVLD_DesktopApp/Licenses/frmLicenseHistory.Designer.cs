@@ -82,7 +82,6 @@
             // 
             this.ctrlLicenseHistory1.Location = new System.Drawing.Point(8, 543);
             this.ctrlLicenseHistory1.Name = "ctrlLicenseHistory1";
-            this.ctrlLicenseHistory1.PersonID = -1;
             this.ctrlLicenseHistory1.Size = new System.Drawing.Size(1039, 355);
             this.ctrlLicenseHistory1.TabIndex = 28;
             // 

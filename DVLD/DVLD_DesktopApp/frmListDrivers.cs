@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.Licenses;
+﻿using DVLD_DesktopApp.Applications.InternationalLicenseApplications;
+using DVLD_DesktopApp.Licenses;
 using DVLD_DesktopApp.People;
 using DVLDBusiness;
 using System;
@@ -101,6 +102,19 @@ namespace DVLD_DesktopApp
             int personID = Convert.ToInt32(dgvDrivers.CurrentRow.Cells["PersonID"].Value);
             frmLicenseHistory frm = new frmLicenseHistory(personID);
             frm.ShowDialog();
+        }
+
+        private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int DriverID = Convert.ToInt32(dgvDrivers.CurrentRow.Cells["DriverID"].Value);
+            int LicenseID = clsLicense.GetActiveLicenseID(DriverID);
+            if (LicenseID != -1)
+            {
+                frmIssueInternationalLicense frm = new frmIssueInternationalLicense(LicenseID);
+                frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("There is no active local license for this driver", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

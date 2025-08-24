@@ -16,7 +16,25 @@ namespace DVLD_DesktopApp.Controls
     public partial class ctrlDriverLicenseInfo : UserControl
     {
         public int LocalLicenseAppID { get; set; } = 0;
+        public int AppID { get; set; } = 0;
+
         private string picturesFolder = @"C:\DVLD-People-Images";
+
+        public int LicenseID
+        {
+            get
+            {
+                return Convert.ToInt32(lblLicenseID.Text);
+            }
+        }
+
+        public int DriverID
+        {
+            get
+            {
+                return Convert.ToInt32(blDriverID.Text);
+            }
+        }
 
         public ctrlDriverLicenseInfo()
         {
@@ -38,10 +56,18 @@ namespace DVLD_DesktopApp.Controls
 
         public void LoadLicenseInfo()
         {
-            clsLocalLicenseApplication localapp = clsLocalLicenseApplication.Find(LocalLicenseAppID);
-            if (localapp != null)
+            if(LocalLicenseAppID != 0)
             {
-                DataRow license = clsLicense.GetLicenseDetails(localapp.ApplicationID);
+                clsLocalLicenseApplication localapp = clsLocalLicenseApplication.Find(LocalLicenseAppID);
+                if (localapp != null)
+                {
+                    AppID = localapp.ApplicationID;
+                }
+            }
+            DataRow license = clsLicense.GetLicenseDetails(AppID);
+
+            if (license != null)
+            {
                 lblClass.Text = license["ClassName"].ToString();
                 lblName.Text = license["Name"].ToString();
                 lblLicenseID.Text = license["LicenseID"].ToString();

@@ -10,6 +10,43 @@ namespace DVLDData
 {
     public class clsLicenseData
     {
+        public static bool Find(int licenseID, ref int applicationID, ref int driverID, ref int licenseClass,
+                        ref DateTime issueDate, ref DateTime expirationDate, ref string notes,
+                        ref decimal paidFees, ref bool isActive, ref byte issueReason, ref int createdByUserID)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"SELECT * FROM Licenses WHERE LicenseID = @LicenseID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LicenseID", licenseID);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+
+                            applicationID = (int)reader["ApplicationID"];
+                            driverID = (int)reader["DriverID"];
+                            licenseClass = (int)reader["LicenseClass"];
+                            issueDate = (DateTime)reader["IssueDate"];
+                            expirationDate = (DateTime)reader["ExpirationDate"];
+                            notes = reader["Notes"] != DBNull.Value ? (string)reader["Notes"] : "";
+                            paidFees = Convert.ToDecimal(reader["PaidFees"]);
+                            isActive = (bool)reader["IsActive"];
+                            issueReason = Convert.ToByte(reader["IssueReason"]);
+                            createdByUserID = (int)reader["CreatedByUserID"];
+                        }
+                    }
+                }
+            }
+            return isFound;
+        }
+
         public static int AddNewLicense(int applicationID, int driverID, int licenseClass,
             DateTime issueDate, DateTime expirationDate, string notes, decimal paidFees,
             bool isActive, byte issueReason, int createdByUserID)
@@ -132,6 +169,31 @@ namespace DVLDData
             }
 
             return dt;
+        }
+
+        public static int GetActiveLicenseID(int driverID)
+        {
+            int licenseID = -1;
+
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+            SELECT LicenseID
+            FROM Licenses
+            WHERE DriverID = @DriverID AND IsActive = 1";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@DriverID", driverID);
+
+                    conn.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                        licenseID = Convert.ToInt32(result);
+                }
+            }
+
+            return licenseID;
         }
 
     }

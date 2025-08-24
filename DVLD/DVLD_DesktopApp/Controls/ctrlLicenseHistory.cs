@@ -13,17 +13,21 @@ namespace DVLD_DesktopApp.Controls
 {
     public partial class ctrlLicenseHistory : UserControl
     {
-        public int PersonID { get; set; } = -1;
-
         public ctrlLicenseHistory()
         {
             InitializeComponent();
         }
 
-        public void LoadLocalLicenses()
+        public void LoadLocalLicenses(int PersonID)
         {
             dgvLocalLicenses.DataSource = clsLicense.GetLicensesByPerson(PersonID);
             lblLocalCount.Text = dgvLocalLicenses.RowCount.ToString();
+        }
+
+        public void LoadInternationalLicenses(int DriverID)
+        {
+            dgvInternationalLicenses.DataSource = clsInternationalLicense.GetLicensesHistory(DriverID);
+            lblIntCount.Text = dgvInternationalLicenses.RowCount.ToString();
         }
     }
 }

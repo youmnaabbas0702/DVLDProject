@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.Designer.cs">
+      <DependentUpon>frmIssueInternationalLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\InternationalLicenseApplications\frmListInternationalLicenseApps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\InternationalLicenseApplications\frmListInternationalLicenseApps.Designer.cs">
+      <DependentUpon>frmListInternationalLicenseApps.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\LocalLicenseApplications\frmAddEditLocalLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,24 @@
     </Compile>
     <Compile Include="Controls\ctrlDriverLicenseInfo.Designer.cs">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlDriverLicenseInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDriverLicenseInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlDriverLicenseInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlInternationalDriverInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlInternationalDriverInfo.Designer.cs">
+      <DependentUpon>ctrlInternationalDriverInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlInternationalLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ctrlLicenseAppDetails.cs">
       <SubType>UserControl</SubType>
@@ -130,6 +160,12 @@
     </Compile>
     <Compile Include="frmMainScreen.Designer.cs">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\frmIntLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\frmIntLicenseInfo.Designer.cs">
+      <DependentUpon>frmIntLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\frmIssueNewLicense.cs">
       <SubType>Form</SubType>
@@ -223,6 +259,12 @@
     <Compile Include="Users\frmUserDetails.Designer.cs">
       <DependentUpon>frmUserDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.resx">
+      <DependentUpon>frmIssueInternationalLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\InternationalLicenseApplications\frmListInternationalLicenseApps.resx">
+      <DependentUpon>frmListInternationalLicenseApps.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\LocalLicenseApplications\frmAddEditLocalLicenseApplication.resx">
       <DependentUpon>frmAddEditLocalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +282,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlDriverLicenseInfoWithFilter.resx">
+      <DependentUpon>ctrlDriverLicenseInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlInternationalDriverInfo.resx">
+      <DependentUpon>ctrlInternationalDriverInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlInternationalLicenseInfo.resx">
+      <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlLicenseAppDetails.resx">
       <DependentUpon>ctrlLicenseAppDetails.cs</DependentUpon>
@@ -264,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainScreen.resx">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\frmIntLicenseInfo.resx">
+      <DependentUpon>frmIntLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\frmIssueNewLicense.resx">
       <DependentUpon>frmIssueNewLicense.cs</DependentUpon>

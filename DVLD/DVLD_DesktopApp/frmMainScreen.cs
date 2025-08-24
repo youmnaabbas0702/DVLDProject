@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.Applications.LocalLicenseApplications;
+﻿using DVLD_DesktopApp.Applications.InternationalLicenseApplications;
+using DVLD_DesktopApp.Applications.LocalLicenseApplications;
 using DVLD_DesktopApp.ApplicationTypes;
 using DVLD_DesktopApp.People;
 using DVLD_DesktopApp.TestTypes;
@@ -86,6 +87,18 @@ namespace DVLD_DesktopApp
         private void driversToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListDrivers frm = new frmListDrivers();
+            frm.ShowDialog();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIssueInternationalLicense frm = new frmIssueInternationalLicense();
+            frm.ShowDialog();
+        }
+
+        private void internationalLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListInternationalLicenseApps frm = new frmListInternationalLicenseApps();
             frm.ShowDialog();
         }
     }

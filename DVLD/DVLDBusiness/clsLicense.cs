@@ -38,6 +38,48 @@ namespace DVLDBusiness
 
         }
 
+        public clsLicense(int licenseID, int applicationID, int driverID, int licenseClass,
+                  DateTime issueDate, DateTime expirationDate, string notes,
+                  decimal paidFees, bool isActive, byte issueReason, int createdByUserID)
+        {
+            LicenseID = licenseID;
+            ApplicationID = applicationID;
+            DriverID = driverID;
+            LicenseClass = licenseClass;
+            IssueDate = issueDate;
+            ExpirationDate = expirationDate;
+            Notes = notes;
+            PaidFees = paidFees;
+            IsActive = isActive;
+            IssueReason = issueReason;
+            CreatedByUserID = createdByUserID;
+        }
+
+        public static clsLicense Find(int licenseID)
+        {
+            int applicationID = 0, driverID = 0, licenseClass = 0, createdByUserID = 0;
+            DateTime issueDate = DateTime.MinValue, expirationDate = DateTime.MinValue;
+            string notes = "";
+            decimal paidFees = 0;
+            bool isActive = false;
+            byte issueReason = 0;
+
+            bool isFound = clsLicenseData.Find(licenseID, ref applicationID, ref driverID, ref licenseClass,
+                                               ref issueDate, ref expirationDate, ref notes,
+                                               ref paidFees, ref isActive, ref issueReason, ref createdByUserID);
+
+            if (isFound)
+            {
+                return new clsLicense(licenseID, applicationID, driverID, licenseClass, issueDate,
+                                      expirationDate, notes, paidFees, isActive, issueReason, createdByUserID);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
         private bool _AddNewLicense()
         {
             clsLicenseClass licenseClassInfo = clsLicenseClass.Find(this.LicenseClass);
@@ -101,5 +143,9 @@ namespace DVLDBusiness
             return clsLicenseData.GetLicensesByPersonID(personID);
         }
 
+        public static int GetActiveLicenseID(int driverId)
+        {
+            return clsLicenseData.GetActiveLicenseID(driverId);
+        }
     }
 }

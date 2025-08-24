@@ -41,3 +41,9 @@ D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopAp
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Licenses.frmLicenseInfo.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlLicenseHistory.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Licenses.frmLicenseHistory.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlDriverLicenseInfoWithFilter.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Applications.InternationalLicenseApplications.frmIssueInternationalLicense.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlInternationalDriverInfo.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Applications.InternationalLicenseApplications.frmListInternationalLicenseApps.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlInternationalLicenseInfo.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Licenses.frmIntLicenseInfo.resources
