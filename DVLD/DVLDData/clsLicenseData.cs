@@ -171,7 +171,8 @@ namespace DVLDData
             CASE L.IssueReason
                 WHEN 1 THEN 'First time'
                 WHEN 2 THEN 'Renewal'
-                WHEN 3 THEN 'Replacement'
+                WHEN 3 THEN 'Replacement for lost'
+                WHEN 4 THEN 'Replacement for damage'
                 ELSE 'Unknown'
             END AS IssueReason,
             L.Notes,

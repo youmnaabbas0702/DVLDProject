@@ -2,6 +2,7 @@
 using DVLD_DesktopApp.Applications.InternationalLicenseApplications;
 using DVLD_DesktopApp.Applications.LocalLicenseApplications;
 using DVLD_DesktopApp.ApplicationTypes;
+using DVLD_DesktopApp.Licenses;
 using DVLD_DesktopApp.People;
 using DVLD_DesktopApp.TestTypes;
 using DVLD_DesktopApp.Users;
@@ -106,6 +107,24 @@ namespace DVLD_DesktopApp
         private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmRenewLicense frm = new frmRenewLicense();
+            frm.ShowDialog();
+        }
+
+        private void replacementOfLosOrDamagedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReplaceLicense frm = new frmReplaceLicense();
+            frm.ShowDialog();
+        }
+
+        private void detainLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmDetainLicense frm = new frmDetainLicense();
+            frm.ShowDialog();
+        }
+
+        private void manageDetainedLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageDetainedLicenses frm = new frmManageDetainedLicenses();
             frm.ShowDialog();
         }
     }

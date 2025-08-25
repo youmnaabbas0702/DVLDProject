@@ -52,6 +52,12 @@
     <Compile Include="Applications\frmRenewLicense.Designer.cs">
       <DependentUpon>frmRenewLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\frmReplaceLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\frmReplaceLicense.Designer.cs">
+      <DependentUpon>frmReplaceLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="clsGlobalSettings.cs" />
+    <Compile Include="Controls\ctrlDetainLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDetainLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlDetainLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +161,12 @@
     <Compile Include="Controls\ctrlRenewLicenseApp.Designer.cs">
       <DependentUpon>ctrlRenewLicenseApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctrlReplaceLicenseApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlReplaceLicenseApp.Designer.cs">
+      <DependentUpon>ctrlReplaceLicenseApp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctrlUserCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +191,12 @@
     <Compile Include="frmMainScreen.Designer.cs">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\frmDetainLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\frmDetainLicense.Designer.cs">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\frmIntLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +220,12 @@
     </Compile>
     <Compile Include="Licenses\frmLicenseInfo.Designer.cs">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\frmManageDetainedLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\frmManageDetainedLicenses.Designer.cs">
+      <DependentUpon>frmManageDetainedLicenses.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmAddEditPerson.cs">
       <SubType>Form</SubType>
@@ -274,6 +304,9 @@
     <EmbeddedResource Include="Applications\frmRenewLicense.resx">
       <DependentUpon>frmRenewLicense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\frmReplaceLicense.resx">
+      <DependentUpon>frmReplaceLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.resx">
       <DependentUpon>frmIssueInternationalLicense.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationTypes\frmListApplicationTypes.resx">
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlDetainLicenseInfo.resx">
+      <DependentUpon>ctrlDetainLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
@@ -322,6 +358,9 @@
     <EmbeddedResource Include="Controls\ctrlRenewLicenseApp.resx">
       <DependentUpon>ctrlRenewLicenseApp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlReplaceLicenseApp.resx">
+      <DependentUpon>ctrlReplaceLicenseApp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlUserCard.resx">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +373,9 @@
     <EmbeddedResource Include="frmMainScreen.resx">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\frmDetainLicense.resx">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\frmIntLicenseInfo.resx">
       <DependentUpon>frmIntLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\frmLicenseInfo.resx">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\frmManageDetainedLicenses.resx">
+      <DependentUpon>frmManageDetainedLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmAddEditPerson.resx">
       <DependentUpon>frmAddEditPerson.cs</DependentUpon>
