@@ -15,7 +15,7 @@ namespace DVLD_DesktopApp.Applications
 {
     public partial class frmRenewLicense : Form
     {
-        private int _NewLicenseAppID = -1;
+        private int _NewLicenseID = -1;
         public frmRenewLicense()
         {
             InitializeComponent();
@@ -77,7 +77,7 @@ namespace DVLD_DesktopApp.Applications
                     {
                         MessageBox.Show($"License renewed successfully, new license ID = {RenewedLicense.LicenseID}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ctrlRenewLicenseApp1.SetRenewedLicenseInfo(app.ApplicationID, RenewedLicense.LicenseID);
-                        _NewLicenseAppID = RenewedLicense.ApplicationID;
+                        _NewLicenseID = RenewedLicense.LicenseID;
                         lnklblShowLicense.Enabled = true;
                         return;
                     }
@@ -94,7 +94,7 @@ namespace DVLD_DesktopApp.Applications
 
         private void lnklblShowLicense_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmLicenseInfo frm = new frmLicenseInfo(0, _NewLicenseAppID);
+            frmLicenseInfo frm = new frmLicenseInfo(_NewLicenseID);
             frm.ShowDialog();
         }
 

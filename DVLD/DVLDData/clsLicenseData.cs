@@ -114,50 +114,76 @@ namespace DVLDData
             return rowsAffected > 0;
         }
 
-        public static DataRow GetLicenseDetailsByApplicationID(int applicationID)
+        public static int GetLicenseIDByLocalAppID(int localAppID)
+        {
+            int licenseID = -1;
+
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+            SELECT Licenses.LicenseID
+            FROM Applications 
+            INNER JOIN Licenses ON Applications.ApplicationID = Licenses.ApplicationID
+            INNER JOIN LocalDrivingLicenseApplications 
+                ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+            WHERE LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = @LocalAppID";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@LocalAppID", localAppID);
+
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                    licenseID = Convert.ToInt32(result);
+            }
+
+            return licenseID;
+        }
+
+        public static DataRow GetLicenseDetailsByLicenseID(int licenseID)
         {
             DataTable dt = new DataTable();
 
             using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"
-            SELECT 
-                LC.ClassName, 
-                P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS [Name], 
-                L.LicenseID, 
-                CASE L.IsActive 
-                    WHEN 1 THEN 'Yes' ELSE 'No' 
-                END AS IsActive,
-                CASE 
-                    WHEN EXISTS (
-                        SELECT 1 
-                        FROM DetainedLicenses DL
-                        WHERE DL.LicenseID = L.LicenseID AND DL.IsReleased = 0
-                    ) THEN 'Yes'
-                    ELSE 'No'
-                END AS IsDetained,
-                P.NationalNo, 
-                P.DateOfBirth, 
-                P.Gendor, 
-                D.DriverID, 
-                L.IssueDate, 
-                L.ExpirationDate, 
-                CASE L.IssueReason
-                    WHEN 1 THEN 'First time'
-                    WHEN 2 THEN 'Renewal'
-                    WHEN 3 THEN 'Replacement'
-                    ELSE 'Unknown'
-                END AS IssueReason,
-                L.Notes,
-                P.ImagePath
-            FROM Licenses L
-            INNER JOIN Drivers D ON L.DriverID = D.DriverID
-            INNER JOIN People P ON D.PersonID = P.PersonID
-            INNER JOIN LicenseClasses LC ON L.LicenseClass = LC.LicenseClassID
-            WHERE L.ApplicationID = @ApplicationID;";
+        SELECT 
+            LC.ClassName, 
+            P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS [Name], 
+            L.LicenseID, 
+            CASE L.IsActive 
+                WHEN 1 THEN 'Yes' ELSE 'No' 
+            END AS IsActive,
+            CASE 
+                WHEN EXISTS (
+                    SELECT 1 
+                    FROM DetainedLicenses DL
+                    WHERE DL.LicenseID = L.LicenseID AND DL.IsReleased = 0
+                ) THEN 'Yes'
+                ELSE 'No'
+            END AS IsDetained,
+            P.NationalNo, 
+            P.DateOfBirth, 
+            P.Gendor, 
+            D.DriverID, 
+            L.IssueDate, 
+            L.ExpirationDate, 
+            CASE L.IssueReason
+                WHEN 1 THEN 'First time'
+                WHEN 2 THEN 'Renewal'
+                WHEN 3 THEN 'Replacement'
+                ELSE 'Unknown'
+            END AS IssueReason,
+            L.Notes,
+            P.ImagePath
+        FROM Licenses L
+        INNER JOIN Drivers D ON L.DriverID = D.DriverID
+        INNER JOIN People P ON D.PersonID = P.PersonID
+        INNER JOIN LicenseClasses LC ON L.LicenseClass = LC.LicenseClassID
+        WHERE L.LicenseID = @LicenseID;";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@ApplicationID", applicationID);
+                cmd.Parameters.AddWithValue("@LicenseID", licenseID);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dt);

@@ -15,8 +15,6 @@ namespace DVLD_DesktopApp.Controls
 {
     public partial class ctrlDriverLicenseInfo : UserControl
     {
-        public int LocalLicenseAppID { get; set; } = 0;
-        public int AppID { get; set; } = 0;
 
         private string picturesFolder = @"C:\DVLD-People-Images";
 
@@ -54,17 +52,9 @@ namespace DVLD_DesktopApp.Controls
             }
         }
 
-        public void LoadLicenseInfo()
+        public void LoadLicenseInfo(int LicenseID)
         {
-            if(LocalLicenseAppID != 0)
-            {
-                clsLocalLicenseApplication localapp = clsLocalLicenseApplication.Find(LocalLicenseAppID);
-                if (localapp != null)
-                {
-                    AppID = localapp.ApplicationID;
-                }
-            }
-            DataRow license = clsLicense.GetLicenseDetails(AppID);
+            DataRow license = clsLicense.GetLicenseDetails(LicenseID);
 
             if (license != null)
             {

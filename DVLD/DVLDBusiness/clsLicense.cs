@@ -133,14 +133,19 @@ namespace DVLDBusiness
             return _AddNewLicense();
         }
 
+        public static int GetLicenseIDByLocalAppID(int localAppID)
+        {
+            return clsLicenseData.GetLicenseIDByLocalAppID(localAppID);
+        }
+
         public bool Deactivate()
         {
             return clsLicenseData.DeactivateLicense(this.LicenseID);
         }
 
-        public static DataRow GetLicenseDetails(int ApplicationID)
+        public static DataRow GetLicenseDetails(int LicenseID)
         {
-            return clsLicenseData.GetLicenseDetailsByApplicationID(ApplicationID);
+            return clsLicenseData.GetLicenseDetailsByLicenseID(LicenseID);
         }
 
         public static DataTable GetLicensesByPerson(int personID)

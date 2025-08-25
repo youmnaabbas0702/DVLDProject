@@ -46,9 +46,7 @@ namespace DVLD_DesktopApp.Controls
 
         public void LoadLicenseInfo(int licenseID)
         {
-            clsLicense license = clsLicense.Find(licenseID);
-            ctrlDriverLicenseInfo1.AppID = license.ApplicationID;
-            ctrlDriverLicenseInfo1.LoadLicenseInfo();
+            ctrlDriverLicenseInfo1.LoadLicenseInfo(licenseID);
             gpFilter.Enabled = false;
             LicenseSelected?.Invoke();
 
@@ -66,8 +64,7 @@ namespace DVLD_DesktopApp.Controls
 
             if (license != null)
             {
-                ctrlDriverLicenseInfo1.AppID = license.ApplicationID;
-                ctrlDriverLicenseInfo1.LoadLicenseInfo();
+                ctrlDriverLicenseInfo1.LoadLicenseInfo(license.LicenseID);
                 LicenseSelected?.Invoke();
             }
             else

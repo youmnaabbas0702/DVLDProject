@@ -58,7 +58,6 @@
             // 
             // ctrlDriverLicenseInfo1
             // 
-            this.ctrlDriverLicenseInfo1.LocalLicenseAppID = 0;
             this.ctrlDriverLicenseInfo1.Location = new System.Drawing.Point(10, 176);
             this.ctrlDriverLicenseInfo1.Name = "ctrlDriverLicenseInfo1";
             this.ctrlDriverLicenseInfo1.Size = new System.Drawing.Size(913, 453);

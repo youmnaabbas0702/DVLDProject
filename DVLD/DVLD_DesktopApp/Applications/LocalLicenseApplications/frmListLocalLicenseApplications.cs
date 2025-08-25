@@ -286,7 +286,8 @@ namespace DVLD_DesktopApp.Applications.LocalLicenseApplications
         private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int localLicenseAppID = Convert.ToInt32(dgvApplications.CurrentRow.Cells["L.D.L.AppID"].Value);
-            frmLicenseInfo frm = new frmLicenseInfo(localLicenseAppID);
+            int licenseID = clsLicense.GetLicenseIDByLocalAppID(localLicenseAppID);
+            frmLicenseInfo frm = new frmLicenseInfo(licenseID);
             frm.ShowDialog();
         }
 
