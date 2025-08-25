@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\frmRenewLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\frmRenewLicense.Designer.cs">
+      <DependentUpon>frmRenewLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="Controls\ctrlPersonCardWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlRenewLicenseApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlRenewLicenseApp.Designer.cs">
+      <DependentUpon>ctrlRenewLicenseApp.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ctrlUserCard.cs">
       <SubType>UserControl</SubType>
@@ -259,6 +271,9 @@
     <Compile Include="Users\frmUserDetails.Designer.cs">
       <DependentUpon>frmUserDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Applications\frmRenewLicense.resx">
+      <DependentUpon>frmRenewLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.resx">
       <DependentUpon>frmIssueInternationalLicense.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlPersonCardWithFilter.resx">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlRenewLicenseApp.resx">
+      <DependentUpon>ctrlRenewLicenseApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlUserCard.resx">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>

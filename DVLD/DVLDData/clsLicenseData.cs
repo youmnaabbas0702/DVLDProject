@@ -93,6 +93,27 @@ namespace DVLDData
             return newLicenseID;
         }
 
+        public static bool DeactivateLicense(int licenseID)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Licenses
+                         SET IsActive = 0
+                         WHERE LicenseID = @LicenseID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@LicenseID", licenseID);
+                    conn.Open();
+                    rowsAffected = cmd.ExecuteNonQuery();
+                }
+            }
+
+            return rowsAffected > 0;
+        }
+
         public static DataRow GetLicenseDetailsByApplicationID(int applicationID)
         {
             DataTable dt = new DataTable();

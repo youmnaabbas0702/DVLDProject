@@ -133,6 +133,11 @@ namespace DVLDBusiness
             return _AddNewLicense();
         }
 
+        public bool Deactivate()
+        {
+            return clsLicenseData.DeactivateLicense(this.LicenseID);
+        }
+
         public static DataRow GetLicenseDetails(int ApplicationID)
         {
             return clsLicenseData.GetLicenseDetailsByApplicationID(ApplicationID);

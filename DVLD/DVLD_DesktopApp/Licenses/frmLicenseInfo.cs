@@ -12,11 +12,13 @@ namespace DVLD_DesktopApp.Licenses
 {
     public partial class frmLicenseInfo : Form
     {
-        public frmLicenseInfo(int LDLAppID)
+        public frmLicenseInfo(int LDLAppID, int AppID=-1)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             ctrlDriverLicenseInfo1.LocalLicenseAppID = LDLAppID;
+            if(AppID!=-1)
+                ctrlDriverLicenseInfo1.AppID = AppID;
             ctrlDriverLicenseInfo1.LoadLicenseInfo();
         }
 

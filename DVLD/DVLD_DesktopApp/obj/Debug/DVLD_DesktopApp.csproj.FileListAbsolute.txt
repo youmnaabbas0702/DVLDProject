@@ -47,3 +47,5 @@ D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopAp
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Applications.InternationalLicenseApplications.frmListInternationalLicenseApps.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlInternationalLicenseInfo.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Licenses.frmIntLicenseInfo.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Applications.frmRenewLicense.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlRenewLicenseApp.resources

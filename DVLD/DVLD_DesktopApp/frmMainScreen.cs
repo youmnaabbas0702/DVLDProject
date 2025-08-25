@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.Applications.InternationalLicenseApplications;
+﻿using DVLD_DesktopApp.Applications;
+using DVLD_DesktopApp.Applications.InternationalLicenseApplications;
 using DVLD_DesktopApp.Applications.LocalLicenseApplications;
 using DVLD_DesktopApp.ApplicationTypes;
 using DVLD_DesktopApp.People;
@@ -99,6 +100,12 @@ namespace DVLD_DesktopApp
         private void internationalLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListInternationalLicenseApps frm = new frmListInternationalLicenseApps();
+            frm.ShowDialog();
+        }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRenewLicense frm = new frmRenewLicense();
             frm.ShowDialog();
         }
     }
