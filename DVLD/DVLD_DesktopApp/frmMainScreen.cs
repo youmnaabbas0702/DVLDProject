@@ -127,5 +127,17 @@ namespace DVLD_DesktopApp
             frmManageDetainedLicenses frm = new frmManageDetainedLicenses();
             frm.ShowDialog();
         }
+
+        private void releaseLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainedLicense frm = new frmReleaseDetainedLicense();
+            frm.ShowDialog();
+        }
+
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainedLicense frm = new frmReleaseDetainedLicense();
+            frm.ShowDialog();
+        }
     }
 }

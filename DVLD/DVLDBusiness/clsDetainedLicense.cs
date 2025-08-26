@@ -33,6 +33,16 @@ namespace DVLDBusiness
             ReleaseApplicationID = -1;
         }
 
+        public static DataRow Find(int detainID)
+        {
+            return clsDetainedLicenseData.Find(detainID);
+        }
+
+        public static int GetDetainIDByLicenseID(int licenseID)
+        {
+            return clsDetainedLicenseData.GetDetainIDByLicenseID(licenseID);
+        }
+
         public static int DetainLicense(int licenseID, decimal fineFees, int createdByUserID)
         {
             return clsDetainedLicenseData.DetainLicense(licenseID, DateTime.Now, fineFees, createdByUserID);

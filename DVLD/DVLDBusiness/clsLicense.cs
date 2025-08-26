@@ -142,6 +142,11 @@ namespace DVLDBusiness
         {
             return clsLicenseData.DeactivateLicense(this.LicenseID);
         }
+        
+        public bool Activate()
+        {
+            return clsLicenseData.ActivateLicense(this.LicenseID);
+        }
 
         public static DataRow GetLicenseDetails(int LicenseID)
         {

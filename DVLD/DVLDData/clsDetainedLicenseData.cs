@@ -10,6 +10,26 @@ namespace DVLDData
 {
     public class clsDetainedLicenseData
     {
+        public static DataRow Find(int detainID)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"
+            SELECT DetainID, LicenseID, DetainDate, FineFees, CreatedByUserID
+            FROM DetainedLicenses
+            WHERE DetainID = @DetainID";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@DetainID", detainID);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+
+            return (dt.Rows.Count > 0) ? dt.Rows[0] : null;
+        }
+
         public static int DetainLicense(int licenseID, DateTime detainDate, decimal fineFees, int createdByUserID)
         {
             int detainID = -1;
@@ -56,6 +76,26 @@ namespace DVLDData
             return found;
         }
 
+        public static int GetDetainIDByLicenseID(int licenseID)
+        {
+            int detainID = -1;
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"SELECT TOP 1 DetainID
+                         FROM DetainedLicenses
+                         WHERE LicenseID = @LicenseID AND IsReleased = 0";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@LicenseID", licenseID);
+
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                    detainID = Convert.ToInt32(result);
+            }
+            return detainID;
+        }
+
         public static bool ReleaseLicense(int licenseID, DateTime releaseDate, int releasedByUserID, int releaseAppID)
         {
             int rowsAffected = 0;
@@ -97,9 +137,9 @@ namespace DVLDData
                     DL.FineFees,
                     DL.IsReleased,
                     DL.ReleaseDate,
-                    DL.ReleaseApplicationID as ReleaseAppID,
                     P.NationalNo,
-                    P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS FullName
+                    P.FirstName + ' ' + P.SecondName + ' ' + P.LastName AS FullName,
+                    DL.ReleaseApplicationID as ReleaseAppID
                 FROM DetainedLicenses DL
                 INNER JOIN Licenses L ON DL.LicenseID = L.LicenseID
                 INNER JOIN Drivers D ON L.DriverID = D.DriverID

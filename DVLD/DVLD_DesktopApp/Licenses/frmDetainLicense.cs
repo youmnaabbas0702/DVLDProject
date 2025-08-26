@@ -14,6 +14,8 @@ namespace DVLD_DesktopApp.Licenses
 {
     public partial class frmDetainLicense : Form
     {
+        public event Action OperationOccuredEventHandler;
+
         public frmDetainLicense()
         {
             InitializeComponent();
@@ -75,6 +77,11 @@ namespace DVLD_DesktopApp.Licenses
                 frmLicenseHistory frm = new frmLicenseHistory(driver.PersonID);
                 frm.ShowDialog();
             }
+        }
+
+        private void frmDetainLicense_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            OperationOccuredEventHandler?.Invoke();
         }
     }
 }

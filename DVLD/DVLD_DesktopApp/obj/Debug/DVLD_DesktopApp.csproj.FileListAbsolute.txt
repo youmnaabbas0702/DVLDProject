@@ -54,3 +54,5 @@ D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopAp
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlDetainLicenseInfo.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Licenses.frmDetainLicense.resources
 D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Licenses.frmManageDetainedLicenses.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Controls.ctrlReleaseLicenseInfo.resources
+D:\programming\course19\New folder\DVLD\DVLD_DesktopApp\obj\Debug\DVLD_DesktopApp.Licenses.frmReleaseDetainedLicense.resources
