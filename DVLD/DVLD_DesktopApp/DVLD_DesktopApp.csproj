@@ -277,16 +277,16 @@
     <Compile Include="Tests\frmTakeTest.Designer.cs">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestTypes\frmEditTestType.cs">
+    <Compile Include="Tests\TestTypes\frmEditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestTypes\frmEditTestType.Designer.cs">
+    <Compile Include="Tests\TestTypes\frmEditTestType.Designer.cs">
       <DependentUpon>frmEditTestType.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestTypes\frmListTestTypes.cs">
+    <Compile Include="Tests\TestTypes\frmListTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestTypes\frmListTestTypes.Designer.cs">
+    <Compile Include="Tests\TestTypes\frmListTestTypes.Designer.cs">
       <DependentUpon>frmListTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
@@ -432,10 +432,10 @@
     <EmbeddedResource Include="Tests\frmTakeTest.resx">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestTypes\frmEditTestType.resx">
+    <EmbeddedResource Include="Tests\TestTypes\frmEditTestType.resx">
       <DependentUpon>frmEditTestType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestTypes\frmListTestTypes.resx">
+    <EmbeddedResource Include="Tests\TestTypes\frmListTestTypes.resx">
       <DependentUpon>frmListTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">

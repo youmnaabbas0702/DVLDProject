@@ -42,41 +42,42 @@ namespace DVLD_DesktopApp.People
             {
 
                 dgvPeople.Columns[0].HeaderText = "Person ID";
-                dgvPeople.Columns[0].Width = 110;
+                dgvPeople.Columns[0].Width = 90;
 
                 dgvPeople.Columns[1].HeaderText = "National No.";
-                dgvPeople.Columns[1].Width = 120;
+                dgvPeople.Columns[1].Width = 90;
 
 
                 dgvPeople.Columns[2].HeaderText = "First Name";
-                dgvPeople.Columns[2].Width = 120;
+                dgvPeople.Columns[2].Width = 100;
 
                 dgvPeople.Columns[3].HeaderText = "Second Name";
-                dgvPeople.Columns[3].Width = 140;
+                dgvPeople.Columns[3].Width = 100;
 
 
                 dgvPeople.Columns[4].HeaderText = "Third Name";
-                dgvPeople.Columns[4].Width = 120;
+                dgvPeople.Columns[4].Width = 90;
 
                 dgvPeople.Columns[5].HeaderText = "Last Name";
-                dgvPeople.Columns[5].Width = 120;
+                dgvPeople.Columns[5].Width = 100;
 
-                dgvPeople.Columns[6].HeaderText = "Gendor";
-                dgvPeople.Columns[6].Width = 120;
+                dgvPeople.Columns[6].HeaderText = "Date Of Birth";
+                dgvPeople.Columns[6].Width = 100;
 
-                dgvPeople.Columns[7].HeaderText = "Date Of Birth";
-                dgvPeople.Columns[7].Width = 140;
+                dgvPeople.Columns[7].HeaderText = "Gender";
+                dgvPeople.Columns[7].Width = 70;
 
-                dgvPeople.Columns[8].HeaderText = "Nationality";
-                dgvPeople.Columns[8].Width = 120;
+                dgvPeople.Columns[8].HeaderText = "Address";
+                dgvPeople.Columns[8].Width = 80;
 
+                dgvPeople.Columns[9].HeaderText = "Nationality";
+                dgvPeople.Columns[9].Width = 90;
 
-                dgvPeople.Columns[9].HeaderText = "Phone";
-                dgvPeople.Columns[9].Width = 120;
+                dgvPeople.Columns[10].HeaderText = "Phone";
+                dgvPeople.Columns[10].Width = 90;
 
-
-                dgvPeople.Columns[10].HeaderText = "Email";
-                dgvPeople.Columns[10].Width = 170;
+                dgvPeople.Columns[11].HeaderText = "Email";
+                dgvPeople.Columns[11].Width = 130;
             }
             _UpdateCountLabel();
         }

@@ -1,4 +1,5 @@
-﻿using DVLDData;
+﻿using DVLD_DesktopApp;
+using DVLDData;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,6 +19,8 @@ namespace DVLDBusiness
         public string Password { get; set; }
         public bool IsActive { get; set; }
 
+        public clsPerson PersonInfo;
+
         public enMode Mode { get; private set; }
 
         public clsUser()
@@ -35,6 +38,7 @@ namespace DVLDBusiness
         {
             UserID = userID;
             PersonID = personID;
+            this.PersonInfo = clsPerson.Find(PersonID);//composition
             UserName = userName;
             Password = password;
             IsActive = isActive;
@@ -77,6 +81,9 @@ namespace DVLDBusiness
 
         private bool _AddNewUser()
         {
+            if (UserExists(PersonID))
+                return false; // handle user not duplicated for same personID
+
             this.UserID = clsUserData.AddNewUser(PersonID, UserName, Password, IsActive);
             return this.UserID != -1;
         }

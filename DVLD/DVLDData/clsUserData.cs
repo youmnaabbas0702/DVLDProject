@@ -165,8 +165,8 @@ namespace DVLDData
 
         public static DataTable GetAllUsers()
         {
-            string query = @"SELECT UserID, PersonID, UserName, IsActive
-                         FROM Users";
+            string query = @"SELECT UserID, Users.PersonID,FullName = People.FirstName + ' ' + People.SecondName + ' ' + People.LastName, UserName, IsActive
+                         FROM Users INNER JOIN People on Users.PersonID = People.PersonID";
 
             DataTable dt = new DataTable();
             try

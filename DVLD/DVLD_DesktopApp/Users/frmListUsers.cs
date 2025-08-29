@@ -26,7 +26,7 @@ namespace DVLD_DesktopApp.Users
 
         private void _SetUp()
         {
-            this.Size = new Size(570, 510);
+            this.Size = new Size(650, 510);
             this.StartPosition = FormStartPosition.CenterScreen;
             cmbFilter.SelectedIndex = 0;
             txtFilter.Visible = false;
@@ -43,6 +43,24 @@ namespace DVLD_DesktopApp.Users
             DataTable dt = clsUser.GetAllUsers();
             _UsersBindingSource.DataSource = dt;
             dgvUsers.DataSource = _UsersBindingSource;
+
+            if (dgvUsers.Rows.Count > 0)
+            {
+                dgvUsers.Columns[0].HeaderText = "User ID";
+                dgvUsers.Columns[0].Width = 90;
+
+                dgvUsers.Columns[1].HeaderText = "Person ID";
+                dgvUsers.Columns[1].Width = 90;
+
+                dgvUsers.Columns[2].HeaderText = "Full Name";
+                dgvUsers.Columns[2].Width = 180;
+
+                dgvUsers.Columns[3].HeaderText = "UserName";
+                dgvUsers.Columns[3].Width = 100;
+
+                dgvUsers.Columns[4].HeaderText = "Is Active";
+                dgvUsers.Columns[4].Width = 90;
+            }
             _UpdateCountLabel();
         }
 

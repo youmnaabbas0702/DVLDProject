@@ -104,7 +104,7 @@
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersWidth = 62;
             this.dgvUsers.RowTemplate.Height = 28;
-            this.dgvUsers.Size = new System.Drawing.Size(773, 384);
+            this.dgvUsers.Size = new System.Drawing.Size(926, 384);
             this.dgvUsers.TabIndex = 12;
             // 
             // contextMenuStrip1
@@ -245,7 +245,7 @@
             this.btnClose.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_DesktopApp.Properties.Resources.close;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(640, 662);
+            this.btnClose.Location = new System.Drawing.Point(793, 662);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(142, 46);
             this.btnClose.TabIndex = 17;
@@ -256,7 +256,7 @@
             // btnAddNew
             // 
             this.btnAddNew.Image = global::DVLD_DesktopApp.Properties.Resources.AddPerson;
-            this.btnAddNew.Location = new System.Drawing.Point(696, 171);
+            this.btnAddNew.Location = new System.Drawing.Point(849, 173);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(86, 83);
             this.btnAddNew.TabIndex = 14;
@@ -278,7 +278,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(811, 724);
+            this.ClientSize = new System.Drawing.Size(947, 724);
             this.Controls.Add(this.cmbIsActive);
             this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.label3);
