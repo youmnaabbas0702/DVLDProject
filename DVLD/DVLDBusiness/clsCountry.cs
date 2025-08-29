@@ -8,8 +8,30 @@ using System.Threading.Tasks;
 
 namespace DVLDBusiness
 {
-    public static class clsCountry
+    public class clsCountry
     {
+        public int ID { get; set; }
+        public string CountryName { get; set; }
+
+        private clsCountry(int ID, string CountryName)
+
+        {
+            this.ID = ID;
+            this.CountryName = CountryName;
+        }
+
+        public static clsCountry Find(int ID)
+        {
+            string CountryName = "";
+
+            if (clsCountryData.FindCountryByID(ID, ref CountryName))
+
+                return new clsCountry(ID, CountryName);
+            else
+                return null;
+
+        }
+
         public static List<string> GetAllCountries()
         {
             return clsCountryData.GetAllCountries().AsEnumerable()

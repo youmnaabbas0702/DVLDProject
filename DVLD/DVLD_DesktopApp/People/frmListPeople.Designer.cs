@@ -258,6 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1547, 723);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblRecordsCount);
@@ -269,6 +270,7 @@
             this.Controls.Add(this.dgvPeople);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmListPeople";
             this.Text = "List People";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).EndInit();

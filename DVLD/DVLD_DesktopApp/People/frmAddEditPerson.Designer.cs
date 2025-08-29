@@ -34,12 +34,24 @@
             this.lblPersonID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRemoveImage = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.cmbCountry = new System.Windows.Forms.ComboBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.llSetImage = new System.Windows.Forms.LinkLabel();
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtNationalNo = new System.Windows.Forms.TextBox();
@@ -64,23 +76,11 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.epEmailValidate = new System.Windows.Forms.ErrorProvider(this.components);
             this.label15 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.pbImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epRequired)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epUniqueNationalNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epEmailValidate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -173,6 +173,106 @@
             this.btnRemoveImage.Visible = false;
             this.btnRemoveImage.Click += new System.EventHandler(this.btnRemoveImage_Click);
             // 
+            // label24
+            // 
+            this.label24.Image = global::DVLD_DesktopApp.Properties.Resources.Nationality;
+            this.label24.Location = new System.Drawing.Point(390, 159);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(25, 33);
+            this.label24.TabIndex = 44;
+            // 
+            // label23
+            // 
+            this.label23.Image = global::DVLD_DesktopApp.Properties.Resources.Phone;
+            this.label23.Location = new System.Drawing.Point(384, 121);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(33, 33);
+            this.label23.TabIndex = 43;
+            // 
+            // label22
+            // 
+            this.label22.Image = global::DVLD_DesktopApp.Properties.Resources.BirthDate;
+            this.label22.Location = new System.Drawing.Point(388, 75);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 42);
+            this.label22.TabIndex = 42;
+            // 
+            // label17
+            // 
+            this.label17.Image = global::DVLD_DesktopApp.Properties.Resources.address;
+            this.label17.Location = new System.Drawing.Point(93, 202);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(25, 33);
+            this.label17.TabIndex = 41;
+            // 
+            // label21
+            // 
+            this.label21.Image = global::DVLD_DesktopApp.Properties.Resources.Email;
+            this.label21.Location = new System.Drawing.Point(93, 152);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(25, 33);
+            this.label21.TabIndex = 40;
+            // 
+            // label20
+            // 
+            this.label20.Image = global::DVLD_DesktopApp.Properties.Resources.Male;
+            this.label20.Location = new System.Drawing.Point(98, 116);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(20, 33);
+            this.label20.TabIndex = 38;
+            // 
+            // label19
+            // 
+            this.label19.Image = global::DVLD_DesktopApp.Properties.Resources.Female;
+            this.label19.Location = new System.Drawing.Point(191, 114);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(20, 33);
+            this.label19.TabIndex = 37;
+            // 
+            // label18
+            // 
+            this.label18.Image = global::DVLD_DesktopApp.Properties.Resources.id;
+            this.label18.Location = new System.Drawing.Point(84, 84);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(39, 35);
+            this.label18.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.Image = global::DVLD_DesktopApp.Properties.Resources.PersonName;
+            this.label16.Location = new System.Drawing.Point(89, 47);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(34, 28);
+            this.label16.TabIndex = 5;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = global::DVLD_DesktopApp.Properties.Resources.Save;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(411, 273);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(105, 39);
+            this.btnSave.TabIndex = 35;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::DVLD_DesktopApp.Properties.Resources.close;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(291, 273);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(105, 39);
+            this.btnClose.TabIndex = 34;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
@@ -239,6 +339,18 @@
             this.llSetImage.TabStop = true;
             this.llSetImage.Text = "Set Image";
             this.llSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSetImage_LinkClicked);
+            // 
+            // pbImage
+            // 
+            this.pbImage.Image = global::DVLD_DesktopApp.Properties.Resources.MaleImage;
+            this.pbImage.Location = new System.Drawing.Point(568, 88);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(2);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(119, 108);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImage.TabIndex = 27;
+            this.pbImage.TabStop = false;
+            this.pbImage.Tag = "0";
             // 
             // txtEmail
             // 
@@ -450,122 +562,12 @@
             this.label15.Size = new System.Drawing.Size(39, 35);
             this.label15.TabIndex = 4;
             // 
-            // label24
-            // 
-            this.label24.Image = global::DVLD_DesktopApp.Properties.Resources.Nationality;
-            this.label24.Location = new System.Drawing.Point(390, 159);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(25, 33);
-            this.label24.TabIndex = 44;
-            // 
-            // label23
-            // 
-            this.label23.Image = global::DVLD_DesktopApp.Properties.Resources.Phone;
-            this.label23.Location = new System.Drawing.Point(384, 121);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(33, 33);
-            this.label23.TabIndex = 43;
-            // 
-            // label22
-            // 
-            this.label22.Image = global::DVLD_DesktopApp.Properties.Resources.BirthDate;
-            this.label22.Location = new System.Drawing.Point(388, 75);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(29, 42);
-            this.label22.TabIndex = 42;
-            // 
-            // label17
-            // 
-            this.label17.Image = global::DVLD_DesktopApp.Properties.Resources.address;
-            this.label17.Location = new System.Drawing.Point(93, 202);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(25, 33);
-            this.label17.TabIndex = 41;
-            // 
-            // label21
-            // 
-            this.label21.Image = global::DVLD_DesktopApp.Properties.Resources.Email;
-            this.label21.Location = new System.Drawing.Point(93, 152);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(25, 33);
-            this.label21.TabIndex = 40;
-            // 
-            // label20
-            // 
-            this.label20.Image = global::DVLD_DesktopApp.Properties.Resources.Male;
-            this.label20.Location = new System.Drawing.Point(98, 116);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(20, 33);
-            this.label20.TabIndex = 38;
-            // 
-            // label19
-            // 
-            this.label19.Image = global::DVLD_DesktopApp.Properties.Resources.Female;
-            this.label19.Location = new System.Drawing.Point(191, 114);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(20, 33);
-            this.label19.TabIndex = 37;
-            // 
-            // label18
-            // 
-            this.label18.Image = global::DVLD_DesktopApp.Properties.Resources.id;
-            this.label18.Location = new System.Drawing.Point(84, 84);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(39, 35);
-            this.label18.TabIndex = 5;
-            // 
-            // label16
-            // 
-            this.label16.Image = global::DVLD_DesktopApp.Properties.Resources.PersonName;
-            this.label16.Location = new System.Drawing.Point(89, 47);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(34, 28);
-            this.label16.TabIndex = 5;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = global::DVLD_DesktopApp.Properties.Resources.Save;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(411, 273);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(105, 39);
-            this.btnSave.TabIndex = 35;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::DVLD_DesktopApp.Properties.Resources.close;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(291, 273);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 39);
-            this.btnClose.TabIndex = 34;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pbImage
-            // 
-            this.pbImage.Image = global::DVLD_DesktopApp.Properties.Resources.MaleImage;
-            this.pbImage.Location = new System.Drawing.Point(568, 88);
-            this.pbImage.Margin = new System.Windows.Forms.Padding(2);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(119, 108);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImage.TabIndex = 27;
-            this.pbImage.TabStop = false;
-            this.pbImage.Tag = "0";
-            // 
             // frmAddEditPerson
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(728, 416);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel1);
@@ -573,15 +575,16 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Gill Sans MT", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddEditPerson";
             this.Text = "Add\\Edit Person";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAddEditPerson_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epRequired)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epUniqueNationalNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epEmailValidate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

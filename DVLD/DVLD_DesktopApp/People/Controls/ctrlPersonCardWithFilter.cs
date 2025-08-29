@@ -23,6 +23,9 @@ namespace DVLD_DesktopApp.Controls
 
         private void txtFind_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if(e.KeyChar == (char)Keys.Enter)
+                btnFind.PerformClick();
+
             if (cmbFind.SelectedItem.ToString() == "PersonID")
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))

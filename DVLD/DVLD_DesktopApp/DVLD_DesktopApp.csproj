@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Applications\frmRenewLicense.cs">
+    <Compile Include="Applications\RenewLicense\frmRenewLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\frmRenewLicense.Designer.cs">
+    <Compile Include="Applications\RenewLicense\frmRenewLicense.Designer.cs">
       <DependentUpon>frmRenewLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\frmReplaceLicense.cs">
+    <Compile Include="Applications\ReplaceLicense\frmReplaceLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\frmReplaceLicense.Designer.cs">
+    <Compile Include="Applications\ReplaceLicense\frmReplaceLicense.Designer.cs">
       <DependentUpon>frmReplaceLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.cs">
@@ -88,107 +88,107 @@
     <Compile Include="Applications\LocalLicenseApplications\frmListLocalLicenseApplications.Designer.cs">
       <DependentUpon>frmListLocalLicenseApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationTypes\frmEditApplicationType.cs">
+    <Compile Include="Applications\ApplicationTypes\frmEditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationTypes\frmEditApplicationType.Designer.cs">
+    <Compile Include="Applications\ApplicationTypes\frmEditApplicationType.Designer.cs">
       <DependentUpon>frmEditApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationTypes\frmListApplicationTypes.cs">
+    <Compile Include="Applications\ApplicationTypes\frmListApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationTypes\frmListApplicationTypes.Designer.cs">
+    <Compile Include="Applications\ApplicationTypes\frmListApplicationTypes.Designer.cs">
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="clsGlobalSettings.cs" />
-    <Compile Include="Controls\ctrlDetainLicenseInfo.cs">
+    <Compile Include="GeneralClasses\clsGlobalSettings.cs" />
+    <Compile Include="Licenses\DetainedLicenses\Controls\ctrlDetainLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlDetainLicenseInfo.Designer.cs">
+    <Compile Include="Licenses\DetainedLicenses\Controls\ctrlDetainLicenseInfo.Designer.cs">
       <DependentUpon>ctrlDetainLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlDriverLicenseInfo.cs">
+    <Compile Include="Licenses\LocalLicenses\Controls\ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlDriverLicenseInfo.Designer.cs">
+    <Compile Include="Licenses\LocalLicenses\Controls\ctrlDriverLicenseInfo.Designer.cs">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlDriverLicenseInfoWithFilter.cs">
+    <Compile Include="Licenses\LocalLicenses\Controls\ctrlDriverLicenseInfoWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlDriverLicenseInfoWithFilter.Designer.cs">
+    <Compile Include="Licenses\LocalLicenses\Controls\ctrlDriverLicenseInfoWithFilter.Designer.cs">
       <DependentUpon>ctrlDriverLicenseInfoWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlInternationalDriverInfo.cs">
+    <Compile Include="Licenses\InternationalLicenses\Controls\ctrlInternationalDriverInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlInternationalDriverInfo.Designer.cs">
+    <Compile Include="Licenses\InternationalLicenses\Controls\ctrlInternationalDriverInfo.Designer.cs">
       <DependentUpon>ctrlInternationalDriverInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlInternationalLicenseInfo.cs">
+    <Compile Include="Licenses\InternationalLicenses\Controls\ctrlInternationalLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlInternationalLicenseInfo.Designer.cs">
+    <Compile Include="Licenses\InternationalLicenses\Controls\ctrlInternationalLicenseInfo.Designer.cs">
       <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlLicenseAppDetails.cs">
+    <Compile Include="Applications\LocalLicenseApplications\Controls\ctrlLicenseAppDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlLicenseAppDetails.Designer.cs">
+    <Compile Include="Applications\LocalLicenseApplications\Controls\ctrlLicenseAppDetails.Designer.cs">
       <DependentUpon>ctrlLicenseAppDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlLicenseHistory.cs">
+    <Compile Include="Licenses\LocalLicenses\Controls\ctrlLicenseHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlLicenseHistory.Designer.cs">
+    <Compile Include="Licenses\LocalLicenses\Controls\ctrlLicenseHistory.Designer.cs">
       <DependentUpon>ctrlLicenseHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlPersonCard.cs">
+    <Compile Include="People\Controls\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlPersonCard.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonCard.Designer.cs">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlPersonCardWithFilter.cs">
+    <Compile Include="People\Controls\ctrlPersonCardWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlPersonCardWithFilter.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonCardWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlReleaseLicenseInfo.cs">
+    <Compile Include="Licenses\DetainedLicenses\Controls\ctrlReleaseLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlReleaseLicenseInfo.Designer.cs">
+    <Compile Include="Licenses\DetainedLicenses\Controls\ctrlReleaseLicenseInfo.Designer.cs">
       <DependentUpon>ctrlReleaseLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlRenewLicenseApp.cs">
+    <Compile Include="Applications\RenewLicense\Controls\ctrlRenewLicenseApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlRenewLicenseApp.Designer.cs">
+    <Compile Include="Applications\RenewLicense\Controls\ctrlRenewLicenseApp.Designer.cs">
       <DependentUpon>ctrlRenewLicenseApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlReplaceLicenseApp.cs">
+    <Compile Include="Applications\ReplaceLicense\Controls\ctrlReplaceLicenseApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlReplaceLicenseApp.Designer.cs">
+    <Compile Include="Applications\ReplaceLicense\Controls\ctrlReplaceLicenseApp.Designer.cs">
       <DependentUpon>ctrlReplaceLicenseApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ctrlUserCard.cs">
+    <Compile Include="Users\Controls\ctrlUserCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ctrlUserCard.Designer.cs">
+    <Compile Include="Users\Controls\ctrlUserCard.Designer.cs">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListDrivers.cs">
+    <Compile Include="Drivers\frmListDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListDrivers.Designer.cs">
+    <Compile Include="Drivers\frmListDrivers.Designer.cs">
       <DependentUpon>frmListDrivers.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainScreen.cs">
@@ -197,46 +197,46 @@
     <Compile Include="frmMainScreen.Designer.cs">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\frmDetainLicense.cs">
+    <Compile Include="Licenses\DetainedLicenses\frmDetainLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\frmDetainLicense.Designer.cs">
+    <Compile Include="Licenses\DetainedLicenses\frmDetainLicense.Designer.cs">
       <DependentUpon>frmDetainLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\frmIntLicenseInfo.cs">
+    <Compile Include="Licenses\InternationalLicenses\frmIntLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\frmIntLicenseInfo.Designer.cs">
+    <Compile Include="Licenses\InternationalLicenses\frmIntLicenseInfo.Designer.cs">
       <DependentUpon>frmIntLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\frmIssueNewLicense.cs">
+    <Compile Include="Licenses\LocalLicenses\frmIssueNewLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\frmIssueNewLicense.Designer.cs">
+    <Compile Include="Licenses\LocalLicenses\frmIssueNewLicense.Designer.cs">
       <DependentUpon>frmIssueNewLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\frmLicenseHistory.cs">
+    <Compile Include="Licenses\LocalLicenses\frmLicenseHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\frmLicenseHistory.Designer.cs">
+    <Compile Include="Licenses\LocalLicenses\frmLicenseHistory.Designer.cs">
       <DependentUpon>frmLicenseHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\frmLicenseInfo.cs">
+    <Compile Include="Licenses\LocalLicenses\frmLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\frmLicenseInfo.Designer.cs">
+    <Compile Include="Licenses\LocalLicenses\frmLicenseInfo.Designer.cs">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\frmManageDetainedLicenses.cs">
+    <Compile Include="Licenses\DetainedLicenses\frmManageDetainedLicenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\frmManageDetainedLicenses.Designer.cs">
+    <Compile Include="Licenses\DetainedLicenses\frmManageDetainedLicenses.Designer.cs">
       <DependentUpon>frmManageDetainedLicenses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\frmReleaseDetainedLicense.cs">
+    <Compile Include="Licenses\DetainedLicenses\frmReleaseDetainedLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Licenses\frmReleaseDetainedLicense.Designer.cs">
+    <Compile Include="Licenses\DetainedLicenses\frmReleaseDetainedLicense.Designer.cs">
       <DependentUpon>frmReleaseDetainedLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmAddEditPerson.cs">
@@ -313,10 +313,10 @@
     <Compile Include="Users\frmUserDetails.Designer.cs">
       <DependentUpon>frmUserDetails.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Applications\frmRenewLicense.resx">
+    <EmbeddedResource Include="Applications\RenewLicense\frmRenewLicense.resx">
       <DependentUpon>frmRenewLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\frmReplaceLicense.resx">
+    <EmbeddedResource Include="Applications\ReplaceLicense\frmReplaceLicense.resx">
       <DependentUpon>frmReplaceLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\InternationalLicenseApplications\frmIssueInternationalLicense.resx">
@@ -334,79 +334,79 @@
     <EmbeddedResource Include="Applications\LocalLicenseApplications\frmListLocalLicenseApplications.resx">
       <DependentUpon>frmListLocalLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationTypes\frmEditApplicationType.resx">
+    <EmbeddedResource Include="Applications\ApplicationTypes\frmEditApplicationType.resx">
       <DependentUpon>frmEditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationTypes\frmListApplicationTypes.resx">
+    <EmbeddedResource Include="Applications\ApplicationTypes\frmListApplicationTypes.resx">
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlDetainLicenseInfo.resx">
+    <EmbeddedResource Include="Licenses\DetainedLicenses\Controls\ctrlDetainLicenseInfo.resx">
       <DependentUpon>ctrlDetainLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlDriverLicenseInfo.resx">
+    <EmbeddedResource Include="Licenses\LocalLicenses\Controls\ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlDriverLicenseInfoWithFilter.resx">
+    <EmbeddedResource Include="Licenses\LocalLicenses\Controls\ctrlDriverLicenseInfoWithFilter.resx">
       <DependentUpon>ctrlDriverLicenseInfoWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlInternationalDriverInfo.resx">
+    <EmbeddedResource Include="Licenses\InternationalLicenses\Controls\ctrlInternationalDriverInfo.resx">
       <DependentUpon>ctrlInternationalDriverInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlInternationalLicenseInfo.resx">
+    <EmbeddedResource Include="Licenses\InternationalLicenses\Controls\ctrlInternationalLicenseInfo.resx">
       <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlLicenseAppDetails.resx">
+    <EmbeddedResource Include="Applications\LocalLicenseApplications\Controls\ctrlLicenseAppDetails.resx">
       <DependentUpon>ctrlLicenseAppDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlLicenseHistory.resx">
+    <EmbeddedResource Include="Licenses\LocalLicenses\Controls\ctrlLicenseHistory.resx">
       <DependentUpon>ctrlLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlPersonCard.resx">
+    <EmbeddedResource Include="People\Controls\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlPersonCardWithFilter.resx">
+    <EmbeddedResource Include="People\Controls\ctrlPersonCardWithFilter.resx">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlReleaseLicenseInfo.resx">
+    <EmbeddedResource Include="Licenses\DetainedLicenses\Controls\ctrlReleaseLicenseInfo.resx">
       <DependentUpon>ctrlReleaseLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlRenewLicenseApp.resx">
+    <EmbeddedResource Include="Applications\RenewLicense\Controls\ctrlRenewLicenseApp.resx">
       <DependentUpon>ctrlRenewLicenseApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlReplaceLicenseApp.resx">
+    <EmbeddedResource Include="Applications\ReplaceLicense\Controls\ctrlReplaceLicenseApp.resx">
       <DependentUpon>ctrlReplaceLicenseApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ctrlUserCard.resx">
+    <EmbeddedResource Include="Users\Controls\ctrlUserCard.resx">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListDrivers.resx">
+    <EmbeddedResource Include="Drivers\frmListDrivers.resx">
       <DependentUpon>frmListDrivers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainScreen.resx">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\frmDetainLicense.resx">
+    <EmbeddedResource Include="Licenses\DetainedLicenses\frmDetainLicense.resx">
       <DependentUpon>frmDetainLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\frmIntLicenseInfo.resx">
+    <EmbeddedResource Include="Licenses\InternationalLicenses\frmIntLicenseInfo.resx">
       <DependentUpon>frmIntLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\frmIssueNewLicense.resx">
+    <EmbeddedResource Include="Licenses\LocalLicenses\frmIssueNewLicense.resx">
       <DependentUpon>frmIssueNewLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\frmLicenseHistory.resx">
+    <EmbeddedResource Include="Licenses\LocalLicenses\frmLicenseHistory.resx">
       <DependentUpon>frmLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\frmLicenseInfo.resx">
+    <EmbeddedResource Include="Licenses\LocalLicenses\frmLicenseInfo.resx">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\frmManageDetainedLicenses.resx">
+    <EmbeddedResource Include="Licenses\DetainedLicenses\frmManageDetainedLicenses.resx">
       <DependentUpon>frmManageDetainedLicenses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\frmReleaseDetainedLicense.resx">
+    <EmbeddedResource Include="Licenses\DetainedLicenses\frmReleaseDetainedLicense.resx">
       <DependentUpon>frmReleaseDetainedLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmAddEditPerson.resx">
@@ -654,5 +654,6 @@
   <ItemGroup>
     <None Include="Resources\licenseHistory.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -67,7 +67,7 @@ namespace DVLD_DesktopApp.People
                 txtNationalNo.Text = person.NationalNo;
                 txtAddress.Text = person.Address;
                 rbFemale.Checked = Convert.ToBoolean(person.Gender);
-                cmbCountry.SelectedIndex = person.NationalityCountryID - 1;
+                cmbCountry.SelectedIndex = cmbCountry.FindString(person.CountryInfo.CountryName); ;
                 dtpBirthDate.Value = person.DateOfBirth;
 
                 _SetPersonPicture(person.Gender);
@@ -183,12 +183,9 @@ namespace DVLD_DesktopApp.People
             if (!Directory.Exists(picturesFolder))
                 Directory.CreateDirectory(picturesFolder);
 
-            string extension = ".jpg";
-            if (pbImage.Image.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Png))
-                extension = ".png";
-            else if (pbImage.Image.RawFormat.Equals(System.Drawing.Imaging.ImageFormat.Jpeg))
-                extension = ".jpeg";
-
+            FileInfo fi = new FileInfo(pbImage.ImageLocation);
+            string extension = fi.Extension;
+            
             string fileName = $"{Guid.NewGuid()}{extension}";
             string fullPath = Path.Combine(picturesFolder, fileName);
 

@@ -39,7 +39,7 @@ namespace DVLD_DesktopApp.Licenses
                 clsLicense license = new clsLicense();
                 license.ApplicationID = localapp.ApplicationID;
                 license.IssueDate = DateTime.Now;
-                license.PaidFees = clsApplication.Find(localapp.ApplicationID).PaidFees;
+                license.PaidFees = clsLicenseClass.Find(localapp.LicenseClassID).ClassFees;
                 license.Notes = txtNotes.Text;
                 license.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
                 license.IssueReason = 1;

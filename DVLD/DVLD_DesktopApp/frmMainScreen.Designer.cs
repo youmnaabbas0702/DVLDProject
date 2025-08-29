@@ -92,7 +92,7 @@
             this.manageTestTypesToolStripMenuItem});
             this.applicationsToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.Applications;
             this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
-            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(190, 78);
+            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(190, 76);
             this.applicationsToolStripMenuItem.Text = "Applications";
             // 
             // drivingLicenseToolStripMenuItem
@@ -260,7 +260,7 @@
             // 
             this.peopleToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.people;
             this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
-            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(126, 78);
+            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(126, 76);
             this.peopleToolStripMenuItem.Text = "People";
             this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
             // 
@@ -268,7 +268,7 @@
             // 
             this.driversToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.driver;
             this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
-            this.driversToolStripMenuItem.Size = new System.Drawing.Size(133, 78);
+            this.driversToolStripMenuItem.Size = new System.Drawing.Size(133, 76);
             this.driversToolStripMenuItem.Text = "Drivers";
             this.driversToolStripMenuItem.Click += new System.EventHandler(this.driversToolStripMenuItem_Click);
             // 
@@ -276,7 +276,7 @@
             // 
             this.usersToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.Users;
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(113, 78);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(113, 76);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
@@ -288,7 +288,7 @@
             this.logoutToolStripMenuItem});
             this.accountSettingsToolStripMenuItem.Image = global::DVLD_DesktopApp.Properties.Resources.UserAccountSettings;
             this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
-            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(238, 78);
+            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(238, 76);
             this.accountSettingsToolStripMenuItem.Text = "Account Settings";
             // 
             // currentUserInfoToolStripMenuItem
@@ -317,12 +317,14 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::DVLD_DesktopApp.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(536, 269);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 82);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 215);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(1924, 968);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -334,6 +336,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMainScreen";
             this.Text = "Main";

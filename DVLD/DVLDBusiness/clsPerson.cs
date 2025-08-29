@@ -1,4 +1,5 @@
-﻿using DVLDData;
+﻿using DVLDBusiness;
+using DVLDData;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,6 +29,7 @@ namespace DVLD_DesktopApp
         public int NationalityCountryID { get; set; }
         public string ImagePath { get; set; }
 
+        public clsCountry CountryInfo;
         public enMode Mode { get; private set; }
 
         public clsPerson()
@@ -66,7 +68,7 @@ namespace DVLD_DesktopApp
             Email = email;
             NationalityCountryID = nationalityCountryID;
             ImagePath = imagePath;
-
+            this.CountryInfo = clsCountry.Find(nationalityCountryID); //Composition
             Mode = enMode.Update;
         }
 
@@ -123,6 +125,8 @@ namespace DVLD_DesktopApp
 
         private bool _AddNewPerson()
         {
+            if(IsPersonExist(this.NationalNo))
+                { return false; } //validate national no. not repeated
             this.PersonID = clsPersonData.AddNewPerson(FirstName, SecondName, ThirdName,
             LastName, NationalNo, DateOfBirth, Gender, Address, Phone, Email,
             NationalityCountryID, ImagePath);
@@ -131,6 +135,9 @@ namespace DVLD_DesktopApp
 
         private bool _UpdatePerson()
         {
+            if (IsPersonExist(this.NationalNo))
+            { return false; } //validate national no. not repeated
+
             return clsPersonData.UpdatePerson(PersonID, FirstName, SecondName, ThirdName,
                 LastName, NationalNo, DateOfBirth, Gender, Address, Phone, Email,
                 NationalityCountryID, ImagePath);
