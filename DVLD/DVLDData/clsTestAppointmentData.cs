@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -40,8 +41,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -69,8 +72,10 @@ namespace DVLDData
                     dt.Load(reader);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return dt;
             }
 
@@ -102,8 +107,10 @@ namespace DVLDData
                         newID = id;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return -1;
             }
 
@@ -133,8 +140,10 @@ namespace DVLDData
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -166,8 +175,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
         }
@@ -197,8 +208,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
         }
@@ -225,8 +238,10 @@ namespace DVLDData
                         count = Convert.ToInt32(result);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return 0;
             }
 

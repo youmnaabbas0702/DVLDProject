@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
 namespace DVLDData
 {
@@ -33,8 +34,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -61,8 +64,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return dt;
             }
             return dt;

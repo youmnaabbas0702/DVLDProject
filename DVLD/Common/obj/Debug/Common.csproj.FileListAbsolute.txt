@@ -1,0 +1,6 @@
+D:\programming\course19\New folder\DVLD\Common\bin\Debug\Common.dll
+D:\programming\course19\New folder\DVLD\Common\bin\Debug\Common.pdb
+D:\programming\course19\New folder\DVLD\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+D:\programming\course19\New folder\DVLD\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\programming\course19\New folder\DVLD\Common\obj\Debug\Common.dll
+D:\programming\course19\New folder\DVLD\Common\obj\Debug\Common.pdb

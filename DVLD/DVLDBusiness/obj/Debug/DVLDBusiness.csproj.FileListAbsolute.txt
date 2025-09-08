@@ -7,3 +7,5 @@ D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusiness.cspr
 D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusi.27287F95.Up2Date
 D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusiness.dll
 D:\programming\course19\New folder\DVLD\DVLDBusiness\obj\Debug\DVLDBusiness.pdb
+D:\programming\course19\New folder\DVLD\DVLDBusiness\bin\Debug\Common.dll
+D:\programming\course19\New folder\DVLD\DVLDBusiness\bin\Debug\Common.pdb

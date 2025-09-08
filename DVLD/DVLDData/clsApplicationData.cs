@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -39,8 +40,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -79,8 +82,10 @@ namespace DVLDData
                         ID = newID;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return -1;
             }
 
@@ -146,8 +151,10 @@ namespace DVLDData
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -176,8 +183,10 @@ namespace DVLDData
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 

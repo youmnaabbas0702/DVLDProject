@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
 namespace DVLDData
 {
@@ -35,8 +36,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -65,8 +68,10 @@ namespace DVLDData
                         newID = id;
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return -1;
             }
 
@@ -95,8 +100,10 @@ namespace DVLDData
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -119,8 +126,10 @@ namespace DVLDData
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
 
@@ -147,9 +156,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+                clsLogger.LogError(ex);
+
             }
 
             return dt;
@@ -186,8 +196,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return -1;
             }
 
@@ -250,8 +262,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return null;
             }
 

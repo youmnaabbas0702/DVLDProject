@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -42,8 +43,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return -1;
             }
 

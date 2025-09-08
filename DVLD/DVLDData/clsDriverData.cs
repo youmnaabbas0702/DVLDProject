@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
 namespace DVLDData
 {
@@ -66,6 +67,8 @@ namespace DVLDData
                 }
                 catch (Exception ex)
                 {
+                    clsLogger.LogError(ex);
+
                     newDriverID = -1;
                 }
             }
@@ -89,7 +92,10 @@ namespace DVLDData
                     object result = command.ExecuteScalar();
                     if (result != null) isExist = true;
                 }
-                catch { isExist = false; }
+                catch(Exception ex)
+                {
+                    clsLogger.LogError(ex);
+                    isExist = false; }
             }
 
             return isExist;
@@ -115,8 +121,10 @@ namespace DVLDData
                         driverID = id;
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
+                    clsLogger.LogError(ex);
+
                     driverID = -1; // in case of error
                 }
             }

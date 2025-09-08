@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
 namespace DVLDData
 {
@@ -84,8 +85,10 @@ namespace DVLDData
                         newLicenseID = insertedID;
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
+                    clsLogger.LogError(ex);
+
                     newLicenseID = -1;
                 }
             }

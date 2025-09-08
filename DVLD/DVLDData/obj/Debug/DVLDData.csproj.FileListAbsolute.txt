@@ -4,3 +4,6 @@ D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.csproj.Assem
 D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.csproj.CoreCompileInputs.cache
 D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.dll
 D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.pdb
+D:\programming\course19\New folder\DVLD\DVLDData\bin\Debug\Common.dll
+D:\programming\course19\New folder\DVLD\DVLDData\bin\Debug\Common.pdb
+D:\programming\course19\New folder\DVLD\DVLDData\obj\Debug\DVLDData.csproj.Up2Date

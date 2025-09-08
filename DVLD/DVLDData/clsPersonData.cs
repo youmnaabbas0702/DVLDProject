@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -66,8 +67,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
             return isFound;
@@ -127,8 +130,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
             return isFound;
@@ -185,8 +190,10 @@ namespace DVLDData
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return -1;
             }
             return ID;
@@ -250,8 +257,10 @@ namespace DVLDData
                     
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
             return (rowsAffected > 0);
@@ -271,8 +280,10 @@ namespace DVLDData
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
             return (rowsAffected > 0);
@@ -309,8 +320,10 @@ namespace DVLDData
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return dt;
             }
             return dt;
@@ -337,8 +350,10 @@ namespace DVLDData
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
             return isFound;
@@ -365,8 +380,10 @@ namespace DVLDData
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
             }
             return isFound;

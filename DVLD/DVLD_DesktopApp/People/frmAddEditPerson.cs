@@ -1,4 +1,5 @@
-﻿using DVLD_DesktopApp.Properties;
+﻿using Common;
+using DVLD_DesktopApp.Properties;
 using DVLDBusiness;
 using System;
 using System.Collections.Generic;
@@ -262,6 +263,8 @@ namespace DVLD_DesktopApp.People
                     }
                     catch (Exception ex)
                     {
+                        clsLogger.LogError(ex);
+
                         MessageBox.Show($"Error deleting old image: {ex.Message}");
                     }
                 }

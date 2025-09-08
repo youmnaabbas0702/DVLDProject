@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -31,8 +32,10 @@ namespace DVLDData
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return dt;
             }
             return dt;

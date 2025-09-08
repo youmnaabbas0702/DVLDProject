@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Common;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,10 @@ namespace DVLD_DesktopApp.GeneralClasses
                 Registry.SetValue(KeyPath, PasswordValueName, password, RegistryValueKind.String);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
+
                 return false;
                 
             }
@@ -56,9 +59,9 @@ namespace DVLD_DesktopApp.GeneralClasses
                     }
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                // Ignore errors here, return false
+                clsLogger.LogError(ex);
             }
 
             return false; // credentials not found
@@ -85,12 +88,10 @@ namespace DVLD_DesktopApp.GeneralClasses
                     }
                 }
             }
-            catch (UnauthorizedAccessException)
-            {
 
-            }
-            catch (Exception)
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);
             }
             return false;
         }
