@@ -13,7 +13,9 @@ namespace DVLDBusiness
         public int LicenseID { get; private set; }
         public int ApplicationID { get; set; }
         public int DriverID { get; private set; }
+        public clsDriver DriverInfo { get; private set; }
         public int LicenseClass { get; set; }
+        public clsLicenseClass LicenseClassInfo { get; set; }
         public DateTime IssueDate { get; set; }
         public DateTime ExpirationDate { get; private set; }
         public string Notes { get; set; }
@@ -21,6 +23,23 @@ namespace DVLDBusiness
         public bool IsActive { get; set; }
         public byte IssueReason { get; set; }
         public int CreatedByUserID { get; set; }
+
+        public clsDetainedLicense DetainedInfo { get; set; }
+        public bool IsDetained
+        {
+            get
+            {
+                return clsDetainedLicense.IsLicenseDetained(this.LicenseID);
+            }
+        }
+
+        public string IssueReasonText
+        {
+            get
+            {
+                return GetIssueReasonText(this.IssueReason);
+            }
+        }
 
         public clsLicense()
         {
@@ -45,7 +64,9 @@ namespace DVLDBusiness
             LicenseID = licenseID;
             ApplicationID = applicationID;
             DriverID = driverID;
+            this.DriverInfo = clsDriver.Find(DriverID);
             LicenseClass = licenseClass;
+            this.LicenseClassInfo = clsLicenseClass.Find(LicenseClass);
             IssueDate = issueDate;
             ExpirationDate = expirationDate;
             Notes = notes;
@@ -53,6 +74,25 @@ namespace DVLDBusiness
             IsActive = isActive;
             IssueReason = issueReason;
             CreatedByUserID = createdByUserID;
+            //this.DetainedInfo = clsDetainedLicense.Find(clsDetainedLicense.GetDetainIDByLicenseID(LicenseID));
+        }
+
+        public static string GetIssueReasonText(byte IssueReason)
+        {
+
+            switch (IssueReason)
+            {
+                case 1:
+                    return "First Time";
+                case 2:
+                    return "Renew";
+                case 3:
+                    return "Replacement for Damaged";
+                case 4:
+                    return "Replacement for Lost";
+                default:
+                    return "First Time";
+            }
         }
 
         public static clsLicense Find(int licenseID)
@@ -148,9 +188,31 @@ namespace DVLDBusiness
             return clsLicenseData.ActivateLicense(this.LicenseID);
         }
 
-        public static DataRow GetLicenseDetails(int LicenseID)
+        public int Detain(decimal fineFees, int createdByUserId)
         {
-            return clsLicenseData.GetLicenseDetailsByLicenseID(LicenseID);
+            return clsDetainedLicense.DetainLicense(this.LicenseID, fineFees, createdByUserId);
+        }
+
+        public bool ReleaseDetainedLicense(int releasedByUserID, int releaseAppID)
+        {
+            //releaseAppID could be passed by ref so here we create the application and set it
+            return clsDetainedLicense.ReleaseLicense(LicenseID, releaseAppID, releaseAppID);
+        }
+
+        public clsLicense RenewLicense(string Notes, int CreatedByUserId)
+        {
+            //create application of renew type
+            //create new license with issue reason renew
+            //deactivate current license
+            return new clsLicense();
+        }
+
+        public clsLicense Replace(byte IssueReason, int CreatedByUserId)
+        {
+            //create app according to replace type
+            //create new license with same expiration date
+            //deactivate current license
+            return new clsLicense();
         }
 
         public static DataTable GetLicensesByPerson(int personID)

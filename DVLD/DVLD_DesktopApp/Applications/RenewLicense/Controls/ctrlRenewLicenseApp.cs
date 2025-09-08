@@ -51,6 +51,7 @@ namespace DVLD_DesktopApp.Controls
             int LicenseValidity = clsLicenseClass.Find(license.LicenseClass).DefaultValidityLength;
             lblExpirationDate.Text = DateTime.Today.AddYears(LicenseValidity).ToString();
             lblLicenseFees.Text = clsLicenseClass.Find(license.LicenseClass).ClassFees.ToString();
+            txtNotes.Text = license.Notes;
             lblTotalFees.Text =
                 (Convert.ToDecimal(lblAppFees.Text) + Convert.ToDecimal(lblLicenseFees.Text)).ToString();
         }

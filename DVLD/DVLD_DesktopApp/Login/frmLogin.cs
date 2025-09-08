@@ -1,4 +1,6 @@
-﻿using DVLDBusiness;
+﻿using DVLD_DesktopApp.GeneralClasses;
+using DVLDBusiness;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,17 +25,14 @@ namespace DVLD_DesktopApp
 
         private void LoadCredentials()
         {
-            string filePath = Path.Combine(Application.StartupPath, "credentials.txt");
+            string username = string.Empty;
+            string password = string.Empty;
 
-            if (File.Exists(filePath))
+            if (clsLoginManager.LoadCredentials(ref username, ref password))
             {
-                string[] lines = File.ReadAllLines(filePath);
-                if (lines.Length >= 2)
-                {
-                    txtUserName.Text = lines[0];
-                    txtPassword.Text = lines[1];
-                    chkRememberMe.Checked = true;
-                }
+                txtUserName.Text = username;
+                txtPassword.Text = password;
+                chkRememberMe.Checked = true;
             }
         }
 
@@ -48,18 +47,7 @@ namespace DVLD_DesktopApp
                 epRequired.SetError((TextBox)sender, "");
         }
 
-        private void SaveCredentials(string username, string password)
-        {
-            string filePath = Path.Combine(Application.StartupPath, "credentials.txt");
-            File.WriteAllText(filePath, $"{username}\n{password}");
-        }
-
-        private void ClearCredentials()
-        {
-            string filePath = Path.Combine(Application.StartupPath, "credentials.txt");
-            if (File.Exists(filePath))
-                File.Delete(filePath);
-        }
+        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -73,10 +61,12 @@ namespace DVLD_DesktopApp
 
                     if (chkRememberMe.Checked)
                     {
-                        SaveCredentials(currentUser.UserName, currentUser.Password);
+                        if(!clsLoginManager.SaveCredentials(currentUser.UserName, currentUser.Password))
+                            MessageBox.Show("Failed to save username and password.", "Fail",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        ClearCredentials();
+                        clsLoginManager.ClearCredentials();
                 }
                 else
                     MessageBox.Show("Your Account is not active please contact your admin.", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);

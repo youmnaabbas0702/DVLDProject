@@ -21,12 +21,12 @@ namespace DVLD_DesktopApp.Applications
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Size = new Size(780, 680);
-            ctrlDriverLicenseInfoWithFilter1.LicenseSelected += LoadApplicationInfo;
+            ctrlDriverLicenseInfoWithFilter1.OnLicenseSelected += LoadApplicationInfo;
 
         }
-        private void LoadApplicationInfo()
+        private void LoadApplicationInfo(int LicenseID)
         {
-            ctrlRenewLicenseApp1.InitializeApplicationInfo(ctrlDriverLicenseInfoWithFilter1.LicenseID);
+            ctrlRenewLicenseApp1.InitializeApplicationInfo(LicenseID);
             btnRenew.Enabled = true;
             lnklblLicensesHistory.Enabled = true;
         }
@@ -107,6 +107,11 @@ namespace DVLD_DesktopApp.Applications
                 frmLicenseHistory frm = new frmLicenseHistory(driver.PersonID);
                 frm.ShowDialog();
             }
+        }
+
+        private void ctrlDriverLicenseInfoWithFilter1_OnLicenseSelected(int obj)
+        {
+
         }
     }
 }

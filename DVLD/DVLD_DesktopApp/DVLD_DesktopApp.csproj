@@ -101,6 +101,7 @@
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneralClasses\clsGlobalSettings.cs" />
+    <Compile Include="GeneralClasses\clsLoginManager.cs" />
     <Compile Include="Licenses\DetainedLicenses\Controls\ctrlDetainLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -100,13 +100,7 @@ namespace DVLD_DesktopApp.Licenses
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-            int LicenseID = Convert.ToInt32(dgvDetainedLicenses.CurrentRow.Cells["LicenseID"].Value);
-            if (clsDetainedLicense.IsLicenseDetained(LicenseID))
-            {
-                releaseLicenseToolStripMenuItem.Enabled = true;
-                return;
-            }
-            releaseLicenseToolStripMenuItem.Enabled = false;
+            releaseLicenseToolStripMenuItem.Enabled = !(bool)dgvDetainedLicenses.CurrentRow.Cells["IsReleased"].Value;
         }
 
 

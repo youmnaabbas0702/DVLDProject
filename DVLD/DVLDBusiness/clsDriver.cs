@@ -1,4 +1,5 @@
-﻿using DVLDData;
+﻿using DVLD_DesktopApp;
+using DVLDData;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,6 +13,7 @@ namespace DVLDBusiness
     {
         public int DriverID { get; private set; }
         public int PersonID { get; set; }
+        public clsPerson PersonInfo { get; set; }
         public DateTime CreatedDate { get; set; }
         public int CreatedByUserID { get; set; }
 
@@ -28,6 +30,7 @@ namespace DVLDBusiness
         {
             DriverID = driverID;
             PersonID = personID;
+            this.PersonInfo = clsPerson.Find(personID);
             CreatedDate = createdDate;
             CreatedByUserID = createdByUserID;
         }

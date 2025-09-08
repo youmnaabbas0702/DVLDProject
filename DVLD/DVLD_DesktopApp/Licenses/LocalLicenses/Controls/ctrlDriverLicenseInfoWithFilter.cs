@@ -13,8 +13,7 @@ namespace DVLD_DesktopApp.Controls
 {
     public partial class ctrlDriverLicenseInfoWithFilter : UserControl
     {
-        public event Action LicenseSelected;
-
+        public event Action<int> OnLicenseSelected;
         public ctrlDriverLicenseInfoWithFilter()
         {
             InitializeComponent();
@@ -47,9 +46,8 @@ namespace DVLD_DesktopApp.Controls
         public void LoadLicenseInfo(int licenseID)
         {
             ctrlDriverLicenseInfo1.LoadLicenseInfo(licenseID);
+            OnLicenseSelected?.Invoke(LicenseID);
             gpFilter.Enabled = false;
-            LicenseSelected?.Invoke();
-
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -65,7 +63,9 @@ namespace DVLD_DesktopApp.Controls
             if (license != null)
             {
                 ctrlDriverLicenseInfo1.LoadLicenseInfo(license.LicenseID);
-                LicenseSelected?.Invoke();
+                if (OnLicenseSelected != null)
+                    // Raise the event with a parameter
+                    OnLicenseSelected(LicenseID);
             }
             else
                 MessageBox.Show("License does not exist in the system", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

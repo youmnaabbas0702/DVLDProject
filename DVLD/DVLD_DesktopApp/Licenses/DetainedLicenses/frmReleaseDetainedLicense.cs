@@ -21,21 +21,19 @@ namespace DVLD_DesktopApp.Licenses
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Size = new Size(660, 650);
-            ctrlDriverLicenseInfoWithFilter1.LicenseSelected += LoadDetainInfo;
+            ctrlDriverLicenseInfoWithFilter1.OnLicenseSelected += LoadDetainInfo;
         }
 
         public frmReleaseDetainedLicense(int LicenseID) : this()
         {
-            ctrlDriverLicenseInfoWithFilter1.LicenseSelected += LoadDetainInfo;
             ctrlDriverLicenseInfoWithFilter1.LoadLicenseInfo(LicenseID);
         }
 
-        private void LoadDetainInfo()
+        private void LoadDetainInfo(int LicenseID)
         {
-            int licenseID = ctrlDriverLicenseInfoWithFilter1.LicenseID;
-            if(clsDetainedLicense.IsLicenseDetained(licenseID))
+            if(clsDetainedLicense.IsLicenseDetained(LicenseID))
             {
-                int DetainID = clsDetainedLicense.GetDetainIDByLicenseID(licenseID);
+                int DetainID = clsDetainedLicense.GetDetainIDByLicenseID(LicenseID);
                 ctrlReleaseLicenseInfo1.SetDetainInfo(DetainID);
                 btnRelease.Enabled = true;
                 lnklblShowLicense.Enabled = true;

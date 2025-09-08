@@ -20,20 +20,20 @@ namespace DVLD_DesktopApp.Applications.InternationalLicenseApplications
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Size = new Size(630, 670);
-            ctrlDriverLicenseInfoWithFilter1.LicenseSelected += LoadApplicationInfo;
+            ctrlDriverLicenseInfoWithFilter1.OnLicenseSelected += LoadApplicationInfo;
         }
 
         public frmIssueInternationalLicense(int LocalLicenseID) : this()
         {
-            ctrlDriverLicenseInfoWithFilter1.LicenseSelected += LoadApplicationInfo;
+            ctrlDriverLicenseInfoWithFilter1.OnLicenseSelected += LoadApplicationInfo;
             ctrlDriverLicenseInfoWithFilter1.LoadLicenseInfo(LocalLicenseID);
             btnIssue.Enabled = true;
             lnklblLicensesHistory.Enabled = true;
         }
 
-        private void LoadApplicationInfo()
+        private void LoadApplicationInfo(int LicenseID)
         {
-            ctrlInternationalDriverInfo1.InitializeApplicationInfo(ctrlDriverLicenseInfoWithFilter1.LicenseID);
+            ctrlInternationalDriverInfo1.InitializeApplicationInfo(LicenseID);
             btnIssue.Enabled = true;
         }
 

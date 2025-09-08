@@ -1,4 +1,5 @@
-﻿using DVLDData;
+﻿using DVLD_DesktopApp;
+using DVLDData;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,14 +13,33 @@ namespace DVLDBusiness
     {
         public int ApplicationID { get; private set; }
         public int ApplicantPersonID { get; set; }
+        public clsPerson PersonInfo { get; set; }
         public DateTime ApplicationDate { get; set; }
         public int ApplicationTypeID { get; set; }
+        public clsApplicationType ApplicationTypeInfo { get; set; }
         public byte ApplicationStatus { get; set; }
         public DateTime LastStatusDate { get; set; }
         public decimal PaidFees { get; set; }
         public int CreatedByUserID { get; set; }
+        public clsUser CreatedByUserInfo { get; set; }
 
-
+        public string StatusText
+        {
+            get
+            {
+                switch (ApplicationStatus)
+                {
+                    case 1:
+                        return "New";
+                    case 2:
+                        return "Cancelled";
+                    case 3:
+                        return "Completed";
+                    default:
+                        return "Unknown";
+                }
+            }
+        }
         public enum enMode { AddNew, Update }
         public enMode Mode { get; private set; }
 
@@ -42,12 +62,15 @@ namespace DVLDBusiness
         {
             ApplicationID = applicationID;
             ApplicantPersonID = applicantPersonID;
+            this.PersonInfo = clsPerson.Find(applicantPersonID);
             ApplicationDate = applicationDate;
             ApplicationTypeID = applicationTypeID;
+            this.ApplicationTypeInfo = clsApplicationType.Find(applicationTypeID);
             ApplicationStatus = applicationStatus;
             LastStatusDate = lastStatusDate;
             PaidFees = paidFees;
             CreatedByUserID = createdByUserID;
+            this.CreatedByUserInfo = clsUser.Find(createdByUserID);
             Mode = enMode.Update;
         }
 

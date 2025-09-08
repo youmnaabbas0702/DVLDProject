@@ -22,13 +22,13 @@ namespace DVLD_DesktopApp.Applications
             rbDamaged.Checked = true;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Size = new Size(730, 650);
-            ctrlDriverLicenseInfoWithFilter1.LicenseSelected += LoadApplicationInfo;
+            ctrlDriverLicenseInfoWithFilter1.OnLicenseSelected += LoadApplicationInfo;
 
         }
 
-        private void LoadApplicationInfo()
+        private void LoadApplicationInfo(int LicenseID)
         {
-            ctrlReplaceLicenseApp1.InitializeApplicationInfo(ctrlDriverLicenseInfoWithFilter1.LicenseID);
+            ctrlReplaceLicenseApp1.InitializeApplicationInfo(LicenseID);
             btnIssue.Enabled = true;
             lnklblLicensesHistory.Enabled = true;
         }
