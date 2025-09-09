@@ -52,7 +52,7 @@ namespace DVLD_DesktopApp.Users
 
             if(user != null)
             {
-                if (txtOldPass.Text != user.Password)
+                if (SecurityHelper.HashPassword(txtOldPass.Text) != user.Password)
                 {
                     epOldPassword.SetError(txtOldPass, "Old password is incorrect.");
                 }

@@ -84,13 +84,19 @@ namespace DVLDBusiness
             if (UserExists(PersonID))
                 return false; // handle user not duplicated for same personID
 
-            this.UserID = clsUserData.AddNewUser(PersonID, UserName, Password, IsActive);
+            // Hash before saving
+            string hashedPassword = SecurityHelper.HashPassword(Password);
+
+            this.UserID = clsUserData.AddNewUser(PersonID, UserName, hashedPassword, IsActive);
             return this.UserID != -1;
         }
 
         private bool _UpdateUser()
         {
-            return clsUserData.UpdateUser(UserID, UserName, Password, IsActive);
+            // Hash before saving
+            string hashedPassword = SecurityHelper.HashPassword(Password);
+
+            return clsUserData.UpdateUser(UserID, UserName, hashedPassword, IsActive);
         }
 
         public bool Save()
@@ -123,7 +129,9 @@ namespace DVLDBusiness
 
         public static bool UserExists(string userName, string password)
         {
-            return clsUserData.UserExists(userName, password);
+            // Hash entered password before checking
+            string hashedPassword = SecurityHelper.HashPassword(password);
+            return clsUserData.UserExists(userName, hashedPassword);
         }
 
         public static bool UserExists(int personID)

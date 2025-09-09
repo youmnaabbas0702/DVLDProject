@@ -61,7 +61,7 @@ namespace DVLD_DesktopApp
 
                     if (chkRememberMe.Checked)
                     {
-                        if(!clsLoginManager.SaveCredentials(currentUser.UserName, currentUser.Password))
+                        if(!clsLoginManager.SaveCredentials(txtUserName.Text, txtPassword.Text))
                             MessageBox.Show("Failed to save username and password.", "Fail",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
