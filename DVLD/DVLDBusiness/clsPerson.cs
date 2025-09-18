@@ -135,8 +135,8 @@ namespace DVLD_DesktopApp
 
         private bool _UpdatePerson()
         {
-            if (IsPersonExist(this.NationalNo))
-            { return false; } //validate national no. not repeated
+            //if (IsPersonExist(this.NationalNo))
+            //{ return false; } //validate national no. not repeated
 
             return clsPersonData.UpdatePerson(PersonID, FirstName, SecondName, ThirdName,
                 LastName, NationalNo, DateOfBirth, Gender, Address, Phone, Email,
